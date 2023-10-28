@@ -163,15 +163,15 @@ body{
     background-color: #ced6e0;
 }
 #content #leftsection #maintable th{
-    background-color: #ff4700;
+    background-color: #C70039;
     color: white;
     height: 35px;
     padding: 0 5px;
 }
 #content #leftsection #maintable td{
     height: 30px;
-    line-height: 30px;
-    padding: 0px 10px;
+    line-height: 60px;
+    padding: 0 10px;
 }
 #content #leftsection #maintable img{
     height: 60px;
@@ -181,7 +181,7 @@ body{
     text-align: center;
 }
 #content #leftsection #maintable td .delete{
-    background-color: #c0392b;
+    background-color: black;
     font-size: 18pt;
     color: #fff;
     cursor: pointer;
@@ -252,7 +252,7 @@ body{
     width: 300px;
     margin: 0 auto;
 }
-#content #rightsection .subsection label {
+#content #rightsection .subsection label{
     font-size: 14pt;
     cursor: pointer;
 }
@@ -280,6 +280,7 @@ body{
 #content #rightsection .subsection button{
     background-color: #fff;
     border: 2px solid #000;
+    border-radius: 16px;
     width: 80px;
     height: 30px;
     color: #000;
@@ -288,8 +289,9 @@ body{
     box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.3);
 }
 #content #rightsection .subsection button:hover{
-    border: 2px solid #ff4700;
-    color: #ff4700;
+    border: 2px solid #C70039;
+    border-radius: 16px;
+    color: #C70039;
 }
 .modal{
     height: 100%;
