@@ -1,11 +1,31 @@
-@charset "utf-8";
-/* CSS Document */
-body,html,*{
-	margin: 0;
+:root {
+	--main-bg-color: #fff;
+	--second-bg-color: #f5f5f5;
+	--third-bg-color: #e3e3e3;
+	--grey: #4b4b4b;
+	--black: #000;
+	--red: #c0392b;
+	--top-header-size: 30px;
+	--mid-header-size: 80px;
+	--bottom-header-size: 45px;
+	--btn-bg: #000;
+	--btn-border-color: #000;
+	--btn-color: #fff;
+
+}
+* {
 	padding: 0;
-	border: none;
+	margin: 0;
 	box-sizing: border-box;
-	font-family: sans-serif;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	overflow-x: hidden;
+	position: relative;
+	background-color: var(--main-bg-color);
+	overflow-x: hidden;
 }
 .modal{
 	height: 100%;
@@ -41,7 +61,6 @@ body,html,*{
 	color: #C70039;
 }
 #login h2{
-	font-family:  'Arial', sans-serif;
 	display: inline-block;
 	margin: 20px 0 10px 180px;
 	font-weight: 1200;
@@ -51,7 +70,6 @@ body,html,*{
 	justify-content: center;
 }
 #login label{
-	font-family: 'Lucida Handwriting' , Cursive;
 	display: block;
 	font-weight: bold;
 	font-size: 13pt;
@@ -146,7 +164,6 @@ body,html,*{
 	padding:  0 50px;
 }
 #signup h2{
-	font-family: 'Arial', sans-serif;
 	display: inline-block;
 	margin: 20px 0 10px 290px;
 	padding-bottom: 10px;
@@ -154,7 +171,6 @@ body,html,*{
 	font-size: 20pt;
 }
 #signup label{
-	font-family: 'Lucida Handwriting' , Cursive;
 	display: block;
 	font-weight: bold;
 	font-size: 13pt;
