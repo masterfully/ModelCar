@@ -14,6 +14,7 @@ var productArray = [
     { productID: "P0010", productName: "Bburago Ferrari Race & Play 488 GTB 1/24 Model Car", productIMG: "ferrari/P0010.png", brand: "Ferrari", price: "£22.00", type: "featured" },
     { productID: "P0011", productName: "Bburago Ferrari Race & Play Laferrari 1/24", productIMG: "ferrari/P0011.png", brand: "Ferrari", price: "£20.00", type: "featured" },
     { productID: "P0012", productName: "Bburago Ferrari Race And Play 488 Pista 1/24 Model Car ", productIMG: "ferrari/P0012.png", brand: "Ferrari", price: "£22.00", type: "featured" },
+    { productID: "P0006", productName: "Maisto Premium RC F1 Ferrari SF90 2019 Season Leclerc 1/24", productIMG: "ferrari/P0006.png", brand: "Ferrari", price: "£35.00", type: "featured" },
 
 ];
 localStorage.setItem('product', JSON.stringify(productArray));
@@ -63,11 +64,10 @@ function showProductInfo(productID) {
     document.getElementById("productInfor-container").style.display = "block";
 }
 
-var showFeaturedProduct = document.getElementById("featured");
-showFeaturedProduct.onclick = function () {
+function showSpecialProducts(productType) {
     var str = "";
     for (let i = 0; i < productArray.length; i++) {
-        if (productArray[i].type == "featured") {
+        if (productArray[i].type == productType) {
             str += `<li class= "product" id="${productArray[i].productID}" onclick="showProductInfo('${productArray[i].productID}')">
                             <div class="product-img-container">
                                 <img src="./images/product/${productArray[i].productIMG}" alt="" class="product-img">
@@ -90,6 +90,5 @@ showFeaturedProduct.onclick = function () {
         }
         document.querySelector(".specialProducts-list").innerHTML = str;
     }
-
 }
 

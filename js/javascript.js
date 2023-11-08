@@ -237,3 +237,4 @@ function automaticSlideshow(){
 	setTimeout(automaticSlideshow,2000);
 }
 //banner slideshow end
+
