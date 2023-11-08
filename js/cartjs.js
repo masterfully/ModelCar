@@ -1,5 +1,5 @@
 function addToCart(productid1){
-	var quantity=getElementById('quantity_value');
+	var quantity=document.getElementById('quantity_number');
 	var productArray=JSON.parse(localStorage.getItem('product'));
 	var producttmp;
 	for (var i=0; i<productArray.length;i++) {
@@ -8,20 +8,20 @@ function addToCart(productid1){
 		}
 	}
 
-	if(localStorage.getItem('cart'===null)) {
+	var cartArray = JSON.parse(localStorage.getItem('cart'));
+	if(cartArray==null){
 		var cartArray = [];
 		producttmp.quantity=quantity.value;
 		producttmp.totalPrice=quantity.value*producttmp.price;
 		cartArray.unshift(producttmp);
 		localStorage.setItem('cart',JSON.stringify(cartArray));
 	} else {
-		var cartArray = JSON.parse(localStorage.getItem('cart'));
 		producttmp.quantity=quantity.value;
 		producttmp.totalPrice=quantity.value*producttmp.price;
 		cartArray.unshift(producttmp);
 		localStorage.setItem('cart',JSON.stringify(cartArray));
 	}
-	closeProductinfo();
+	closeProductInfo();
 }
 
 
@@ -29,35 +29,35 @@ function showCartTable(){
 	if (localStorage.getItem('cart')===null || localStorage.getItem('cart')=='[]'){
 		var s='<tr><th>Không có sản phẩm nào trong giỏ hàng</th></tr>';
 		document.getElementById('carttable').innerHTML=s;
-		document.getElementById('totalprice').innerHTML=0;
+		document.getElementById('totalPrice').innerHTML=0;
 	}else {
 		var cartArray = JSON.parse(localStorage.getItem('cart'));
 		var s='<tr><th></th><th>Sản phẩm</th><th>Giá</th><th>Số lượng</th><th>Tổng</th><th></th></tr>';
 		var totalprice=0;
 		for (var i = 0; i < cartArray.length; i++){
-			s+=  '<tr>'+
-					'<td><img src="../'+cartArray[i].productIMG+'"></td>'+
-					'<td><div>'+cartArray[i].productName+'</div></td>'+
-					'<td>'+currency(cartArray[i].price)+'</td>'+
-					'<td>'+
-						'<button onClick="increaseQuantity('+cartArray[i].productID+')">-</button>'+
-						'<input id="quantity" type="text" disabled value="'+cartArray[i].quantity+'" onchange="updateCart(this.value,'+cartArray[i].productID+')">'+
-						'<button onClick="decreaseQuantity('+cartArray[i].productID+')">+</button>'+
-					'</td>'+
-					'<td>'+currency(cartArray[i].price*cartArray[i].quantity)+'</td>'+
-					'<td><button onClick="deletecartitem('+cartArray[i].productID+')">&times;</buttom></td>'+
-				'</tr>';
+			s+=`<tr>
+					<td><img src="../images/product/${cartArray[i].productIMG}"></td>
+					<td><div>${cartArray[i].productName}</div></td>
+					<td>${cartArray[i].price}</td>
+					<td>
+					<button onclick="increaseQuantity('${cartArray[i].productID}')">+</button>
+					<inputt" id="quantity" type="tex value='${cartArray[i].quantity}' onchange="updateCart('${cartArray[i].productID}')">
+					<button onclick="decreaseQuantity('${cartArray[i].productID}')">-</button>
+					</td>
+					<td>${cartArray[i].price*cartArray[i].quantity}</td>
+					<td><button onclick="deleteCart_Item('${cartArray[i].productID}')">&times;</buttom></td>
+				</tr>`;
 			totalprice+=cartArray[i].price*cartArray[i].quantity;
 		}
 		document.getElementById('carttable').innerHTML=s;
-		document.getElementById('totalprice').innerHTML=currency(totalprice);
+		document.getElementById('totalPrice').innerHTML=totalprice;
 	}	
 }
 
-function deleteCart_Item(deleteID){
+function deleteCart_Item(id){
 	var cartArray = JSON.parse(localStorage.getItem('cart'));
 	for (var i = 0; i < cartArray.length; i++) {
-		if(cartArray[i].productID==deleteID){
+		if(cartArray[i].productID==id){
 			cartArray.splice(i, 1);
 		}
 	}
@@ -70,37 +70,38 @@ function deleteCart(){
 	showCartTable();
 }
 
-function updateCart(quantity,productId){
+function updateCart(id){
+	var quantity=document.getElementById('quantity');
 	var cartArray = JSON.parse(localStorage.getItem('cart'));
 	for (var i = 0; i < cartArray.length; i++) {
-		if(cartArray[i].productID==productid){
-			cartArray[i].quantity=quantity;
+		if(cartArray[i].productID==id){
+			cartArray[i].quantity=quantity.value;
 		}
 	}
 	localStorage.setItem('cart',JSON.stringify(cartArray));
 	showCartTable();
 }
 
-function increaseQuantity(productid){
+function increaseQuantity(id){
 	var cartArray=JSON.parse(localStorage.getItem('cart'));
 	for(var i=0; i<cartArray.length; i++){
-		if(cartArray.productID==productid){
-			cartArray.quantity++;
+		if(cartArray[i].productID==id){
+			cartArray[i].quantity++;
 		}
 	}
 	localStorage.setItem('cart',JSON.stringify(cartArray));
 	showCartTable();
 }
 
-function decreaseQuantity(productid){
+function decreaseQuantity(id){
 	var cartArray=JSON.parse(localStorage.getItem('cart'));
 	for(var i=0; i<cartArray.length; i++){
-		if(cartArray.productID==productid){
-			if(cartArray.quantity==1){
-				deleteCart_Item(productid);
+		if(cartArray[i].productID==id){
+			if(cartArray[i].quantity==1){
+				deleteCart_Item(id);
 			}
 			else{
-				cartArray.quantity--;
+				cartArray[i].quantity--;
 			}
 		}
 	}
@@ -110,11 +111,11 @@ function decreaseQuantity(productid){
 
 function Buy(){
 	if(localStorage.getItem('cart')===null || localStorage.getItem('cart')=='[]'){
-		warning('Giỏ hàng trống');
+		// warning('Giỏ hàng trống');
 		return false;
 	}
 	if(localStorage.getItem('userlogin')===null){
-		warning('Đăng nhập để mua hàng');
+		// warning('Đăng nhập để mua hàng');
 		return false;
 	}
 	var cartArray=JSON.parse(localStorage.getItem('cart'));
@@ -151,18 +152,21 @@ function showBill(){
 	else{
 		var user=JSON.parse(localStorage.getItem('userlogin'));
 		var billArray=JSON.parse(localStorage.getItem('bill'));
-		var s='<h2>Đơn hàng đã đặt</h2>';
-		for(var i=0; i<billArray.length; i++){
-			if(user.username===billArray[i].Costumer.username){
-				document.getElementById('bill').style.display='block';
-				s+='<div class="billcontent">'+
-				'<div>'+billArray[i].Info+'</div>'+
-				'<div>'+currency(billArray[i].Totalprice)+'</div>'+
-				'<div>'+billArray[i].Date+'</div>'+
-				'<div>'+billArray[i].Status+'</div>'+
-				'</div>'
+		if(billArray!=null){
+			var s='<h2>Đơn hàng đã đặt</h2>';
+			for(var i=0; i<billArray.length; i++){
+				if(user.username===billArray[i].Costumer.username){
+					document.getElementById('bill').style.display='block';
+					s+='<div class="billcontent">'+
+					'<div>'+billArray[i].Info+'</div>'+
+					'<div>'+billArray[i].Totalprice+'</div>'+
+					'<div>'+billArray[i].Date+'</div>'+
+					'<div>'+billArray[i].Status+'</div>'+
+					'</div>';
+				}
 			}
 		}
+		
 		s+='<butto class="bill_button" onclick="deleteBill()">Xóa tất cả</button>';
 		document.getElementById('bill').innerHTML=s;
 	}
