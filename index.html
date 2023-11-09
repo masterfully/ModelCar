@@ -15,7 +15,8 @@
 
 </head>
 <!--  -->
-<body onload="showMenu();checklogin();showFeaturedProducts()">
+
+<body onload="showMenu();checklogin();showSpecialProducts('featured')">
     <div id="nav">
         <div class="container">
             <div class="topnav">
@@ -134,18 +135,24 @@
             <li class="tab" id="bestselling" onclick="showSpecialProducts('bestselling')">
                 <a class="tab-title">bestselling</a>
             </li>
-            <li class="tab new" onclick="showSpecialProducts('new')">
+            <li class="tab" onclick="showSpecialProducts('new')">
                 <a class="tab-title">new</a>
             </li>
         </ul>
-        <ul class="specialProducts-list">
-
-        </ul>
+        <div class="productList-container">
+            <ul class="specialProducts-list">
+            </ul>
+            <div id="page">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+            </div>
+        </div>
     </div>
 
 
     <div class="productInfor-container" id="productInfor-container">
-        
+
     </div>
 
 
