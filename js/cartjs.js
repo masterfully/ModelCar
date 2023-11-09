@@ -40,9 +40,9 @@ function showCartTable(){
 					<td><div>${cartArray[i].productName}</div></td>
 					<td>${cartArray[i].price}</td>
 					<td>
-					<button onclick="increaseQuantity('${cartArray[i].productID}')">+</button>
-					<inputt" id="quantity" type="tex value='${cartArray[i].quantity}' onchange="updateCart('${cartArray[i].productID}')">
 					<button onclick="decreaseQuantity('${cartArray[i].productID}')">-</button>
+					<input id="quantity" type="text" value="${cartArray[i].quantity}" onchange="updateCart('${cartArray[i].productID}')">
+					<button onclick="increaseQuantity('${cartArray[i].productID}')">+</button>
 					</td>
 					<td>${cartArray[i].price*cartArray[i].quantity}</td>
 					<td><button onclick="deleteCart_Item('${cartArray[i].productID}')">&times;</buttom></td>
@@ -97,11 +97,8 @@ function decreaseQuantity(id){
 	var cartArray=JSON.parse(localStorage.getItem('cart'));
 	for(var i=0; i<cartArray.length; i++){
 		if(cartArray[i].productID==id){
-			if(cartArray[i].quantity==1){
-				deleteCart_Item(id);
-			}
-			else{
-				cartArray[i].quantity--;
+			if(cartArray[i].quantity>1){
+				cartArray[i].quantity--;			
 			}
 		}
 	}

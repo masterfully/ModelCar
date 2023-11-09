@@ -237,11 +237,9 @@ body {
 #cart #title{
 	height: 80px;
 	padding: 20px;
-	background-color: whitesmoke;
 }
 #cart h1{
 	width: 90%;
-	border-bottom: 3px solid #C70039;
 }
 
 #cart #contain{
@@ -290,14 +288,39 @@ body {
 	height: 50px;
 }
 
-#cart .total{
+#cart #contain #carttable td button{
+	height: auto;
+	width: 30px;
+	line-height: 25px;
+	font-size: 15px;
+	text-align: center;
+	border: 2px solid #000;
+	cursor: pointer;
+	outline: none;
+	background: none;
+}
+
+#cart #contain #carttable td button:active{
+	background-color: #C70039;
+	color: #fff;
+}
+#cart #contain #carttable td input{
+	height: 25px;
+	width: 50px;
+	font-size: 12px;
+	text-align: center;
+	border: none;
+	background: none;
+}
+
+#cart #contain .total{
 	font-size: 20px;
 	margin:10px;
 	text-align: right;
 	font-weight: bold;
 }
 
-#cart #contain button{
+#cart #contain>button{
 	height: 50px;
 	color: #fff;
 	font-size: 16px;
