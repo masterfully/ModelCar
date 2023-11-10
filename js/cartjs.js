@@ -119,26 +119,26 @@ function Buy(){
 	var info='';
 	var totalprice=0;
 	for(var i=0; i<cartArray.length; i++){
-		info += '"'+cartArray[i].productName + 'X' + cartArray[i].quantity+'" ; ';
+		info += '"'+cartArray[i].productName + '*' + cartArray[i].quantity+'" ; ';
 		totalprice += cartArray[i].quantity*cartArray[i].price;
 	}
 	var user=JSON.parse(localStorage.getItem('userlogin'));
-	var time=new Date();
-	var date=time.getDate+'-'+(time.getMonth+1)+'-'+time.getFullYear;
-	if(localStorage.getItem('bill')===null){
+	const time=new Date();
+	var date=String(time.getDate())+'-'+String(time.getMonth()+1)+'-'+String(time.getFullYear());
+	billArray=JSON.parse(localStorage.getItem('bill'));
+	if(billArray===null){
 		var billArray=[];
-		var bill={ID: billArray.length, Info: info, Totalprice: totalprice, Costumer: user, Date: date, Status: 'unprocessed'};
+		var bill={ID: billArray.length, Info: info, Totalprice: totalprice, Costumer: user.username, Date: date, Status: 'unprocessed'};
 		billArray.unshift(bill);
-		localStorage.setItem('bill',JSON.stringify(billArray));
 	}
 	else{
-		billArray=JSON.parse(localStorage.getItem('bill'));
-		var bill={ID: billArray.length, Info: info, Totalprice: totalprice, Costumer: user, Date: date, Status: 'unprocessed'};
+		var bill={ID: billArray.length, Info: info, Totalprice: totalprice, Costumer: user.username, Date: date, Status: 'unprocessed'};
 		billArray.unshift(bill);
-		localStorage.setItem('bill',JSON.stringify(billArray));
+		
 	}
-
+	localStorage.setItem('bill',JSON.stringify(billArray));
 	localStorage.removeItem('cart');
+	showCartTable();
 	showBill();
 }
 
@@ -152,28 +152,29 @@ function showBill(){
 		if(billArray!=null){
 			var s='<h2>Đơn hàng đã đặt</h2>';
 			for(var i=0; i<billArray.length; i++){
-				if(user.username===billArray[i].Costumer.username){
+				if(user.username===billArray[i].Costumer){
 					document.getElementById('bill').style.display='block';
 					s+='<div class="billcontent">'+
 					'<div>'+billArray[i].Info+'</div>'+
 					'<div>'+billArray[i].Totalprice+'</div>'+
 					'<div>'+billArray[i].Date+'</div>'+
 					'<div>'+billArray[i].Status+'</div>'+
+					'<div><button onclick="deleteBill('+billArray[i].ID+')">X</button></div>'+
 					'</div>';
 				}
 			}
 		}
-		
-		s+='<butto class="bill_button" onclick="deleteBill()">Xóa tất cả</button>';
 		document.getElementById('bill').innerHTML=s;
 	}
 }
 
-function deleteBill(){
+
+function deleteBill(id){
 	var billArray=JSON.parse(localStorage.getItem('bill'));
-	for(var i=0;i<billArray;i++){
-		if(billArray[i].Status!='unprocessed'){
-			billArray[i].splice(i,1);
+	for(var i=0; i<billArray.length;i++){
+		if(billArray[i].ID==id && billArray[i].Status=='processed'){
+			billArray.splice(i, 1);
+			break;
 		}
 	}
 	localStorage.setItem('bill',JSON.stringify(billArray));

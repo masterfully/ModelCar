@@ -168,9 +168,10 @@ function login(e){
 	for(var i=0;i<userArray.length;i++){
 		if(username==userArray[i].username){
 			if(password==userArray[i].password){
-				closeform();
+				
 				localStorage.setItem('userlogin',JSON.stringify(userArray[i]));
 				window.location.reload(true);
+				closeform();
 				return true;
 			}
 		}
@@ -190,14 +191,14 @@ function checklogin(){
 		var user = JSON.parse(localStorage.getItem('userlogin'));
 		var s='';
 		if(user.username=='admin'){
-			s = '<li><button onClick="window.location.href=\'admin/product.html\'"><img src="images/icon/settings.svg"></button></li>'+
-				'<li><button>'+user.fullname+'</button><button id="btnlogout" onClick="logout(\'index.html\')">LOGOUT</button></li>'+
-				'<li><button onClick="location.href=\'file/cart.html\'"></button></li>'+
-				'<li><button onClick="showSearch()"></button></li>';
+			s = '<li><button onclick="window.location.href=\'admin/product.html\'"><img src="images/icon/settings.svg"></button></li>'+
+				'<li><button>'+user.fullname+'</button><button id="btnlogout" onclick="logout(\'index.html\')">LOGOUT</button></li>'+
+				'<li><button onclick="location.href=\'file/cart.html\'"></button></li>'+
+				'<li><button onclick="showSearch()"></button></li>';
 		}else{
-			s = '<li><button>'+user.fullname+'</button><button id="btnlogout" onClick="logout(\'index.html\')">LOGOUT</button></li>'+
-				'<li><button onClick="location.href=\'file/cart.html\'"></button></li>'+
-				'<li><button onClick="showSearch()"></button></li>';
+			s = '<li><button>'+user.fullname+'</button><button id="btnlogout" onclick="logout(\'index.html\')">LOGOUT</button></li>'+
+				'<li><button onclick="location.href=\'file/cart.html\'"></button></li>'+
+				'<li><button onclick="showSearch()"></button></li>';
 		}
 		document.querySelector('#nav .topnav   ul.right').innerHTML = s;
 	}
@@ -207,14 +208,14 @@ function checklogin2(){
 		var user = JSON.parse(localStorage.getItem('userlogin'));
 		var s='';
 		if(user.username=='admin'){
-			s = '<li><button onClick="window.location.href=\'../admin/product.html\'"><img src="../images/icon/settings.svg"></button></li>'+
-				'<li><button>'+user.fullname+'</button><button id="btnlogout" onClick="logout(\'index.html\')">LOGOUT</button></li>'+
-				'<li><button onClick="location.href=\'../file/cart.html\'"><img src="../images/icon/carticon.svg"></button></li>'+
-				'<li><button onClick="showSearch()"><img src="../images/icon/searchicon.svg"></button></li>';
+			s = '<li><button onclick="window.location.href=\'../admin/product.html\'"><img src="../images/icon/settings.svg"></button></li>'+
+				'<li><button>'+user.fullname+'</button><button id="btnlogout" onclick="logout(\'index.html\')">LOGOUT</button></li>'+
+				'<li><button onclick="location.href=\'../file/cart.html\'"><img src="../images/icon/carticon.svg"></button></li>'+
+				'<li><button onclick="showSearch()"><img src="../images/icon/searchicon.svg"></button></li>';
 		}else{
-			s = '<li><button>'+user.fullname+'</button><button id="btnlogout" onClick="logout(\'index.html\')">LOGOUT</button></li>'+
-				'<li><button onClick="location.href=\'../file/cart.html\'"><img src="../images/icon/carticon.svg"></button></li>'+
-				'<li><button onClick="showSearch()"><img src="../images/icon/searchicon.svg"></button></li>';
+			s = '<li><button>'+user.fullname+'</button><button id="btnlogout" onclick="logout(\'index.html\')">LOGOUT</button></li>'+
+				'<li><button onclick="location.href=\'../file/cart.html\'"><img src="../images/icon/carticon.svg"></button></li>'+
+				'<li><button onclick="showSearch()"><img src="../images/icon/searchicon.svg"></button></li>';
 		}
 		document.querySelector('#nav .topnav ul.right').innerHTML = s;
 	}
