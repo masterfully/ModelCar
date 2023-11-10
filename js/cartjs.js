@@ -172,7 +172,7 @@ function showBill(){
 function deleteBill(id){
 	var billArray=JSON.parse(localStorage.getItem('bill'));
 	for(var i=0; i<billArray.length;i++){
-		if(billArray[i].ID==id && billArray[i].Status=='processed'){
+		if(billArray[i].ID==id){
 			billArray.splice(i, 1);
 			break;
 		}
