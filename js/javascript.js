@@ -190,7 +190,7 @@ function checklogin(){
 		var user = JSON.parse(localStorage.getItem('userlogin'));
 		var s='';
 		if(user.username=='admin'){
-			s = '<li><button onClick="window.location.href=\'admin/product.html\'"><img src="images/icon/settings.svg"></button></li>'+
+			s = '<li><button onClick="window.location.href=\'admin/product.html\'"><i class=\'bx bxs-cog\'></i></button></li>'+
 				'<li><button>'+user.fullname+'</button><button id="btnlogout" onClick="logout(\'index.html\')">LOGOUT</button></li>'+
 				'<li><button onClick="location.href=\'file/cart.html\'"></button></li>'+
 				'<li><button onClick="showSearch()"></button></li>';
@@ -199,7 +199,7 @@ function checklogin(){
 				'<li><button onClick="location.href=\'file/cart.html\'"></button></li>'+
 				'<li><button onClick="showSearch()"></button></li>';
 		}
-		document.querySelector('#nav .topnav   ul.right').innerHTML = s;
+		document.querySelector('.mid-header .user-menu li').innerHTML = s;
 	}
 }
 function checklogin2(){
@@ -235,5 +235,33 @@ function automaticSlideshow(){
 	if(slideIndex>slide.length) {slideIndex=1}
 	slide[slideIndex-1].style.display="block";
 	setTimeout(automaticSlideshow,2000);
+}
+window.onclick = function(event) {
+	openCloseDropdown(event)
+}
+
+function closeAllDropdown() {
+	var dropdowns = document.getElementsByClassName('dropdown-expand')
+	for (var i = 0; i < dropdowns.length; i++) {
+		dropdowns[i].classList.remove('dropdown-expand')
+	}
+}
+
+function openCloseDropdown(event) {
+	if (!event.target.matches('.dropdown-toggle')) {
+		//
+		// Close dropdown when click out of dropdown menu
+		//
+		closeAllDropdown()
+	} else {
+		var toggle = event.target.dataset.toggle
+		var content = document.getElementById(toggle)
+		if (content.classList.contains('dropdown-expand')) {
+			closeAllDropdown()
+		} else {
+			closeAllDropdown()
+			content.classList.add('dropdown-expand')
+		}
+	}
 }
 //banner slideshow end

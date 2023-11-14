@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,8 +19,7 @@
     <link rel="stylesheet" href="css/style-footer.css">
     <title>CMS</title>
 </head>
-
-<body onload="showMenu();checklogin()">
+<body onload="showMenu();checklogin();">
 <header>
     <!-- MOBILE MENU -->
     <div class="mobile-menu bg-second">
@@ -40,13 +38,13 @@
             <div class="top-header container">
                 <ul class="icon-soccial">
                     <li>
-                        <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
+                        <a href="#"><i class='bx bxl-facebook-circle'></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class='bx bxl-youtube' width="50px" height="50px"></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
                     </li>
                 </ul>
                 <ul class="devided">
@@ -77,14 +75,21 @@
             <div class="mid-header container">
                 <img src="./images/icon/logo.png" alt="logo">
                 <div class="search">
-                    <input type="text" placeholder="Serach">
+                    <label>
+                        <input type="text" placeholder="Serach">
+                    </label>
                     <i class='bx bx-search-alt'></i>
                 </div>
                 <div class="user-menu">
-                    <li><button><i class='bx bx-bell'></i></button></li>
-                    <li><button onCLick="showform()"><i class='bx bx-user-circle'></i></button></li>
-                    <li><button onClick="location.href='file/cart.html'"><i class='bx bx-cart-alt'></i></button></li>
-
+                    <li>
+                        <button onCLick="showform()"><i class='bx bx-user-circle'></i></button>
+                    </li>
+                    <li>
+                        <button><i class='bx bx-bell'></i></button>
+                    </li>
+                    <li>
+                        <button onClick="location.href='./file/cart.html'"><i class='bx bx-cart-alt'></i></button>
+                    </li>
                 </div>
             </div>
         </div>
@@ -102,67 +107,67 @@
 
     <!-- END MAIN HEADER -->
 </header>
-    <div id="user" class="modal">
-        <div id="login">
-            <form id="loginform">
-                <button type="button" class="close" onClick="closeform()">+</button>
-                <h2>ĐĂNG NHẬP</h2>
-                <div class="logininfo">
-                    <div class="col">
-                        <label for="usernameLogin">Tên đăng nhập:</label>
-                        <input type="text" id="usernameLogin">
-                        <div id="usernameerror">Bạn chưa nhập tên đăng nhập</div>
-                        <label for="passwordLogin">Mật khẩu:</label>
-                        <input type="password" id="passwordLogin">
-                        <div id="passwordloginerror">Bạn chưa nhập mật khẩu</div>
-                    </div>
+<div id="user" class="modal">
+    <div id="login">
+        <form id="loginform">
+            <button type="button" class="close" onClick="closeform()">+</button>
+            <h2>ĐĂNG NHẬP</h2>
+            <div class="logininfo">
+                <div class="col">
+                    <label for="usernameLogin">Tên đăng nhập:</label>
+                    <input type="text" id="usernameLogin">
+                    <div id="usernameerror">Bạn chưa nhập tên đăng nhập</div>
+                    <label for="passwordLogin">Mật khẩu:</label>
+                    <input type="password" id="passwordLogin">
+                    <div id="passwordloginerror">Bạn chưa nhập mật khẩu</div>
                 </div>
-                <button type="submit" id="btnlogin">Login</button>
-                <p>Bạn chưa có tài khoản? <a href="#" onClick="showSignUp()">Đăng ký</a></p>
-            </form>
-        </div>
-        <div id="signup">
-            <form id="signupform">
-                <button type="button" class="close" onClick="closeform()">+</button>
-                <h2>ĐĂNG KÝ</h2>
-                <div class="signupinfo">
-                    <div class="col">
-                        <label for="fullname">Họ và tên: </label>
-                        <input type="text" id="fullname">
-                        <div id="fullnameerror">Bạn chưa nhập họ tên</div>
-                        <label for="address">Địa chỉ: </label>
-                        <input type="text" id="address">
-                        <div id="addresserror">Bạn chưa địa chỉ</div>
-                        <label for="phone">Số điện thoại: </label>
-                        <input type="text" id="phone">
-                        <div id="phoneerror">Bạn chưa nhập số điện thoại</div>
-                    </div>
-                    <div class="col">
-                        <label for="usernameSignUp">Tên đăng nhập: </label>
-                        <input type="text" id="usernameSignUp">
-                        <div id="usererror">Bạn chưa nhập tên đăng nhập</div>
-                        <label for="passwordSignUp">Mật khẩu: </label>
-                        <input type="password" id="passwordSignUp">
-                        <div id="passworderror">Bạn chưa nhập mật khẩu</div>
-                        <label for="passwordSignUp2">Nhập lại mật khẩu: </label>
-                        <input type="password" id="passwordSignUp2">
-                        <div id="password2error">Mật khẩu không trùng khớp</div>
-                    </div>
+            </div>
+            <button type="submit" id="btnlogin">Login</button>
+            <p>Bạn chưa có tài khoản? <a href="#" onClick="showSignUp()">Đăng ký</a></p>
+        </form>
+    </div>
+    <div id="signup">
+        <form id="signupform">
+            <button type="button" class="close" onClick="closeform()">+</button>
+            <h2>ĐĂNG KÝ</h2>
+            <div class="signupinfo">
+                <div class="col">
+                    <label for="fullname">Họ và tên: </label>
+                    <input type="text" id="fullname">
+                    <div id="fullnameerror">Bạn chưa nhập họ tên</div>
+                    <label for="address">Địa chỉ: </label>
+                    <input type="text" id="address">
+                    <div id="addresserror">Bạn chưa địa chỉ</div>
+                    <label for="phone">Số điện thoại: </label>
+                    <input type="text" id="phone">
+                    <div id="phoneerror">Bạn chưa nhập số điện thoại</div>
                 </div>
-                <button type="submit" id="btnsignup">Đăng ký</button>
-                <p>Trở về trang <a href="#" onClick="showLogin()">Đăng nhập</a></p>
-            </form>
-        </div>
+                <div class="col">
+                    <label for="usernameSignUp">Tên đăng nhập: </label>
+                    <input type="text" id="usernameSignUp">
+                    <div id="usererror">Bạn chưa nhập tên đăng nhập</div>
+                    <label for="passwordSignUp">Mật khẩu: </label>
+                    <input type="password" id="passwordSignUp">
+                    <div id="passworderror">Bạn chưa nhập mật khẩu</div>
+                    <label for="passwordSignUp2">Nhập lại mật khẩu: </label>
+                    <input type="password" id="passwordSignUp2">
+                    <div id="password2error">Mật khẩu không trùng khớp</div>
+                </div>
+            </div>
+            <button type="submit" id="btnsignup">Đăng ký</button>
+            <p>Trở về trang <a href="#" onClick="showLogin()">Đăng nhập</a></p>
+        </form>
     </div>
-    <div class="bannerSection">
-        <div>
-            <img class="slideShow" src="images/banner/Autoart_Banner_with_logo.png">
-            <img class="slideShow" src="images/banner/Bburago_Banner.png">
-            <img class="slideShow" src="images/banner/F1_Carousel_Banner.png">
-            <img class="slideShow" src="images/banner/Maisto_Banner_Bike_V2.png">
-            <img class="slideShow" src="images/banner/Banner_Modelcars.jpg">
-        </div>
+</div>
+<div class="bannerSection">
+    <div>
+        <img class="slideShow" src="images/banner/Autoart_Banner_with_logo.png">
+        <img class="slideShow" src="images/banner/Bburago_Banner.png">
+        <img class="slideShow" src="images/banner/F1_Carousel_Banner.png">
+        <img class="slideShow" src="images/banner/Maisto_Banner_Bike_V2.png">
+        <img class="slideShow" src="images/banner/Banner_Modelcars.jpg">
     </div>
+</div>
 <!--    Product-->
 <div class="specialProducts">
     <ul class="specialProducts-tabs">
@@ -255,130 +260,134 @@
     </div>
 </div>
 <!--    END PRODUCT-->
-    <div class="main-footer">
-        <footer id="footer">
-            <div class="footer__top">
-                <div class="footer__top__left">
-                    <h3>THEO DÕI ĐỂ NHẬN THÔNG TIN MỚI</h3>
-                </div>
-                <div class="footer__top__right">
-                    <form id="footer__top__right__searchBox">
-                        <input id="footer__top__right__searchBox__searchText" type="email" placeholder="bhhh@gmail.com">
-                        <button id="footer__top__right__searchBox__searchButton" type="submit"><i class="fa-regular fa-bell" style="color: white;"></i>
-                            ĐĂNG KÝ</button>
-                    </form>
-                </div>
+<div class="main-footer">
+    <footer id="footer">
+        <div class="footer__top">
+            <div class="footer__top__left">
+                <h3>THEO DÕI ĐỂ NHẬN THÔNG TIN MỚI</h3>
             </div>
+            <div class="footer__top__right">
+                <form id="footer__top__right__searchBox">
+                    <input id="footer__top__right__searchBox__searchText" type="email" placeholder="bhhh@gmail.com">
+                    <button id="footer__top__right__searchBox__searchButton" type="submit"><i class="fa-regular fa-bell"
+                                                                                              style="color: white;"></i>
+                        ĐĂNG KÝ
+                    </button>
+                </form>
+            </div>
+        </div>
 
-            <div class="footer__mid">
-                <div class="footer__mid__left" >
+        <div class="footer__mid">
+            <div class="footer__mid__left">
                     <span class="footer__mid__left__logo">
                         <!-- <img src="https://cdn11.bigcommerce.com/s-hmjw8fgkuv/images/stencil/180x70/cms_logo_new_1660047597__87732.original.png"
                             alt="logoCMS"> -->
                         <img src="images/icon/logo.png" alt="CMS">
                     </span>
-                    <ul class="footer__mid__left__info">
-                        <li class="footer__mid__left__info__sec1">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <div class="footer__mid__left__info__sec1__item">
-                                🏠 Nhà sản xuất mô hình
-                                <br>xe ô tô và xe máy.
-                                <br>1827 An Dương Vương, Q5, TP.HCM
-                                <br>
-                                <br>
-                                Số thuế VAT: SG123456789
-                                <br>
-                                <br>
-                                Giao hàng toàn quốc!!
-                            </div>
-                        </li>
-                        <li class="footer__mid__left__info_sec2">
-                            <i class="fa-solid fa-phone"></i>
-                            <a href="" class="footer__mid__left__info__sec2__item">Gọi chúng tôi tại 0123 456 789 </a>
-                        </li>
-                    </ul>
-                    <ul class="footer__mid__left__socialLink">
-                        <li></li>
-                        <a href=""><i class="fa-brands fa-square-instagram fa-2xl"></i></a>
-                        <a href=""><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
-                        <li></li>
-                    </ul>
-                </div>
-                <div class="footer__mid__right">
-                    <div class="footer__mid__right__col">
-                        <h3>VỀ CMS</h3>
-                        <ul class="footer__mid__right__col__aboutUs">
-                            <li>
-                                <button id="footer__mid__right__col__aboutUs__story">Câu chuyện CMS</button>
-                                <div class="footer__mid__right__col__aboutUs__wrapper-content" style="display: none;">
-                                    <div class="footer__mid__right__col__aboutUs__wrapper-content__top-content">
-                                        <div class="footer__mid__right__col__aboutUs__wrapper-content__top-content__top-content-left"></div>
-                                        <div class="footer__mid__right__col__aboutUs__wrapper-content__top-content__top-content-right">
-                                            <i class="fa-solid fa-xmark" style="color: #000000;"></i>
-                                        </div>
-                                    </div>
-                                    <div class="footer__mid__right__col__aboutUs__wrapper-content__content">
-                                        <h3>VỀ CHÚNG TÔI</h3>
-                                        <p>Chúng tôi là cửa hàng mô hình ô tô! Chúng tôi bắt đầu vào năm 2021 tại
-                                            Birmingham, Vương quốc Anh, với niềm đam mê ô tô. Chúng tôi ở đây để cung
-                                            cấp dịch vụ xuất sắc và nhiều mẫu mã, ô tô điều khiển từ xa và ô tô có khe
-                                            cắm. Lựa chọn của chúng tôi bao gồm từ những chiếc xe mô hình đua xe và F1
-                                            cho đến những chiếc xe đánh bạc Batman tưởng tượng. Nếu bạn đang theo đuổi
-                                            một sản phẩm cụ thể, đừng ngần ngại gọi
-                                            điện hoặc gửi email cho chúng tôi và chúng tôi luôn sẵn sàng trợ giúp 7 ngày
-                                            một tuần. Chúng tôi chuyên đặt hàng qua thư, tuy nhiên chúng tôi rất vui
-                                            được mời bạn đến văn phòng của chúng tôi, nhưng vui lòng cho chúng tôi biết
-                                            khi nào bạn muốn ghé thăm.</p>
+                <ul class="footer__mid__left__info">
+                    <li class="footer__mid__left__info__sec1">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div class="footer__mid__left__info__sec1__item">
+                            🏠 Nhà sản xuất mô hình
+                            <br>xe ô tô và xe máy.
+                            <br>1827 An Dương Vương, Q5, TP.HCM
+                            <br>
+                            <br>
+                            Số thuế VAT: SG123456789
+                            <br>
+                            <br>
+                            Giao hàng toàn quốc!!
+                        </div>
+                    </li>
+                    <li class="footer__mid__left__info_sec2">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="" class="footer__mid__left__info__sec2__item">Gọi chúng tôi tại 0123 456 789 </a>
+                    </li>
+                </ul>
+                <ul class="footer__mid__left__socialLink">
+                    <li></li>
+                    <a href=""><i class="fa-brands fa-square-instagram fa-2xl"></i></a>
+                    <a href=""><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="footer__mid__right">
+                <div class="footer__mid__right__col">
+                    <h3>VỀ CMS</h3>
+                    <ul class="footer__mid__right__col__aboutUs">
+                        <li>
+                            <button id="footer__mid__right__col__aboutUs__story">Câu chuyện CMS</button>
+                            <div class="footer__mid__right__col__aboutUs__wrapper-content" style="display: none;">
+                                <div class="footer__mid__right__col__aboutUs__wrapper-content__top-content">
+                                    <div class="footer__mid__right__col__aboutUs__wrapper-content__top-content__top-content-left"></div>
+                                    <div class="footer__mid__right__col__aboutUs__wrapper-content__top-content__top-content-right">
+                                        <i class="fa-solid fa-xmark" style="color: #000000;"></i>
                                     </div>
                                 </div>
-                            </li>
-                            <li><a href="">Cửa hàng</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__mid__right__col">
-                        <h3>PHÂN LOẠI</h3>
-                        <ul class="footer__mid__right__col__categories">
-                            <li><a href="">Gợi ý</a></li>
-                            <li><a href="">Theo giá</a></li>
-                            <li><a href="">Ưu đãi</a></li>
-                            <li><a href="">Thương hiệu</a></li>
-                            <li><a href="">Kích thước</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__mid__right__col">
-                        <h3>HÃNG PHỔ BIẾN</h3>
-                        <ul class="footer__mid__right__col__brands">
-                            <li>Toyota</li>
-                            <li>Lamborghini</li>
-                            <li>McLaren</li>
-                            <li>Ferrari</li>
-                            <li>Porsche</li>
-                        </ul>
-                    </div>
+                                <div class="footer__mid__right__col__aboutUs__wrapper-content__content">
+                                    <h3>VỀ CHÚNG TÔI</h3>
+                                    <p>Chúng tôi là cửa hàng mô hình ô tô! Chúng tôi bắt đầu vào năm 2021 tại
+                                        Birmingham, Vương quốc Anh, với niềm đam mê ô tô. Chúng tôi ở đây để cung
+                                        cấp dịch vụ xuất sắc và nhiều mẫu mã, ô tô điều khiển từ xa và ô tô có khe
+                                        cắm. Lựa chọn của chúng tôi bao gồm từ những chiếc xe mô hình đua xe và F1
+                                        cho đến những chiếc xe đánh bạc Batman tưởng tượng. Nếu bạn đang theo đuổi
+                                        một sản phẩm cụ thể, đừng ngần ngại gọi
+                                        điện hoặc gửi email cho chúng tôi và chúng tôi luôn sẵn sàng trợ giúp 7 ngày
+                                        một tuần. Chúng tôi chuyên đặt hàng qua thư, tuy nhiên chúng tôi rất vui
+                                        được mời bạn đến văn phòng của chúng tôi, nhưng vui lòng cho chúng tôi biết
+                                        khi nào bạn muốn ghé thăm.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="">Cửa hàng</a></li>
+                    </ul>
+                </div>
+                <div class="footer__mid__right__col">
+                    <h3>PHÂN LOẠI</h3>
+                    <ul class="footer__mid__right__col__categories">
+                        <li><a href="">Gợi ý</a></li>
+                        <li><a href="">Theo giá</a></li>
+                        <li><a href="">Ưu đãi</a></li>
+                        <li><a href="">Thương hiệu</a></li>
+                        <li><a href="">Kích thước</a></li>
+                    </ul>
+                </div>
+                <div class="footer__mid__right__col">
+                    <h3>HÃNG PHỔ BIẾN</h3>
+                    <ul class="footer__mid__right__col__brands">
+                        <li>Toyota</li>
+                        <li>Lamborghini</li>
+                        <li>McLaren</li>
+                        <li>Ferrari</li>
+                        <li>Porsche</li>
+                    </ul>
                 </div>
             </div>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.669658423672!2d106.68006961411632!3d10.75992236244198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f1b7c3ed289%3A0xa06651894598e488!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBTw6BpIEfDsm4!5e0!3m2!1svi!2s!4v1637559140172!5m2!1svi!2s" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.669658423672!2d106.68006961411632!3d10.75992236244198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f1b7c3ed289%3A0xa06651894598e488!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBTw6BpIEfDsm4!5e0!3m2!1svi!2s!4v1637559140172!5m2!1svi!2s"
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
 
-            <div class="footer__bot">
-                <div class="footer__bot__left">
-                    <h5>&copy; 2023 Car Model Store.</h5>
-                </div>
-                <div class="footer__bot__right">
-                    <div class="img"><img src="images/footer-img/shoopee.webp" alt="pic1" height="30px" width="35px"></div>
-                    <div class="img"><img src="images/footer-img/visa.svg" alt="pic2" height="30px" width="35px"></div>
-                    <div class="img"><img src="images/footer-img/apple-pay.svg" alt="pic3" height="30px" width="35px"></div>
-                    <div class=" img"><img src="images/footer-img/MoMo_Logo.png" alt="pic4" height="30px" width="35px"></div>
-                    <div class=" img"><img src="images/footer-img/zalo.png" alt="pic5" height="30px" width="35px"></div>
-                    <div class="img"><img src="images/footer-img/mastercard_payment_method_icon_142750.png" alt="pic6" height="30px"width="35px"></div>
-                </div>
+        <div class="footer__bot">
+            <div class="footer__bot__left">
+                <h5>&copy; 2023 Car Model Store.</h5>
             </div>
-        </footer>
-    </div>
-    <script src="./js/productjs.js"></script>
-    <script src="js/main-footer.js"></script>
-    <script src="js/javascript.js"></script>
+            <div class="footer__bot__right">
+                <div class="img"><img src="images/footer-img/shoopee.webp" alt="pic1" height="30px" width="35px"></div>
+                <div class="img"><img src="images/footer-img/visa.svg" alt="pic2" height="30px" width="35px"></div>
+                <div class="img"><img src="images/footer-img/apple-pay.svg" alt="pic3" height="30px" width="35px"></div>
+                <div class=" img"><img src="images/footer-img/MoMo_Logo.png" alt="pic4" height="30px" width="35px">
+                </div>
+                <div class=" img"><img src="images/footer-img/zalo.png" alt="pic5" height="30px" width="35px"></div>
+                <div class="img"><img src="images/footer-img/mastercard_payment_method_icon_142750.png" alt="pic6"
+                                      height="30px" width="35px"></div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="./js/productjs.js"></script>
+<script src="js/main-footer.js"></script>
+<script src="./js/javascript.js"></script>
 </body>
-
 </html>
