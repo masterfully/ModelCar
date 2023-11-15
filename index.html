@@ -4,68 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CMS</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="images/icon/logo_vYW_icon.ico">
+    <link rel="stylesheet" href="css/styleProduct.css">
     <link rel="stylesheet" href="css/styleuser.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/styleslide.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-jDU6e2v5z5U5g5N5z5HG1v5X9O5p6U5O6U5l6e5v5a5E5z5M5z5j5v5G5v5H5z5y5x5y5v5A5w5b5j5q5e5p5o5g=="
-        crossorigin="anonymous" />
-
+    <link rel="stylesheet" href="css/style-footer.css">
+    <title>CMS</title>
 </head>
 <!--  -->
 
-<body onload="showMenu();checklogin();showSpecialProducts('featured')">
-    <div id="nav">
-        <div class="container">
-            <div class="topnav">
-                <ul class="left">
-                    <li><a href="https://www.facebook.com/carmodelstore"><img src="images/icon/facebookicon.svg"></a>
-                    </li>
-                    <li><a href="https://www.instagram.com/carmodelstore"><img src="images/icon/instagramicon.svg"></a>
-                    </li>
-                    <li><a href="https://www.youtube.com"><img src="images/icon/youtubeicon.svg"></a></li>
-                </ul>
-
-                <ul class="right">
-                    <li><button onclick="showform()"><img src="images/icon/user-icon-svgrepo-com.svg">Sign In or
-                            Register</button></li>
-                </ul>
+<body onload="checklogin();showSpecialProducts('featured')">
+    <header>
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu bg-second">
+            <a href="#" class="mb-logo">DinoShop</a>
+            <span class="mb-menu-toggle" id="mb-menu-toggle">
+                <i class='bx bx-menu'></i>
+            </span>
+        </div>
+        <!-- END MOBILE MENU -->
+        <div class="header-wrapper" id="header-wrapper">
+            <span class="mb-menu-toggle mb-menu-close" id="mb-menu-close">
+                <i class='bx bx-x'></i>
+            </span>
+            <!-- TOP HEADER -->
+            <div class="bg-second">
+                <div class="top-header container">
+                    <ul class="icon-soccial">
+                        <li>
+                            <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class='bx bxl-youtube' width="50px" height="50px"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                        </li>
+                    </ul>
+                    <ul class="devided">
+                        <li class="dropdown">
+                            <a href="">USD</a>
+                            <i class='bx bxs-chevron-down'></i>
+                            <ul class="dropdown-content">
+                                <li><a href="#">VND</a></li>
+                                <li><a href="#">EUR</a></li>
+                                <li><a href="#">CHF</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="">VIETNAMESE</a>
+                            <i class='bx bxs-chevron-down'></i>
+                            <ul class="dropdown-content">
+                                <li><a href="#">ENGLISH</a></li>
+                                <li><a href="#">SPANISH</a></li>
+                                <li><a href="#">JAPANESE</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="botnav">
-                <div class="logo"><a href="index.html"><img src="images/icon/logo.png" alt="CMS"></a></div>
-                <div><button id="btnmenu" onclick="shoMenuMobile()"></button></div>
-                <div class="container">
-                    <div class="top">
-                        <div class="searchbox">
-                            <input type="text" placeholder="" id="search" onKeyUp="search()"><button><img
-                                    src="images/icon/searchicon.svg"></button>
-                        </div>
-                        <div class="searchextend">
-
-                        </div>
-                        <div class="serachresult">
-
-                        </div>
-
-                        <ul class="bot-right">
-                            <li><button><img src="images/icon/heart.svg"></button></li>
-                            <li><button onclick="location.href='file/cart.html'"><img
-                                        src="images/icon/carticon.svg"></button></li>
-                            <li><button onclick="location.href='file/cart.html'"><img
-                                        src="images/icon/carticon.svg"></button></li>
-                        </ul>
+            <!-- END TOP HEADER -->
+            <!-- MID HEADER -->
+            <div class="bg-main">
+                <div class="mid-header container">
+                    <img src="./images/icon/logo.png" alt="logo">
+                    <div class="search">
+                        <input type="text" placeholder="Serach">
+                        <i class='bx bx-search-alt'></i>
                     </div>
+                    <div class="user-menu">
+                        <li><button><i class='bx bx-bell'></i></button></li>
+                        <li><button onCLick="showform()"><i class='bx bx-user-circle'></i></button></li>
+                        <li><button onClick="location.href='file/cart.html'"><i class='bx bx-cart-alt'></i></button>
+                        </li>
 
-                    <div class="bot">
-                        <ul id="navmenu">
-                        </ul>
                     </div>
                 </div>
             </div>
+            <!-- END MID HEADER -->
+            <!-- BOTTOM HEADR -->
+            <div class="bg-second">
+                <div class="bottom-header container">
+                    <ul id="navmenu">
+                        <li class="navBtn"><a href="index.html">TRANG CHỦ</a></li>
+                        <li class="navBtn" onclick="showBrandProducts('TOYOTA')"><a>TOYOTA</a></li>
+                        <li class="navBtn" onclick="showBrandProducts('LAMBORGHINI')"><a>LAMBORGHINI</a></li>
+                        <li class="navBtn" onclick="showBrandProducts('MCLAREN')"><a>MCLAREN</a></li>
+                        <li class="navBtn" onclick="showBrandProducts('PORSCHE')"><a>PORSCHE</a></li>
+                        <li class="navBtn" onclick="showBrandProducts('FERRARI')"><a>FERRARI</a></li>
+                    </ul>
+                </div> <!--có navmenu của phần js để đẩy mấy sản phẩm -->
+            </div>
+            <!-- END BOTTOM HEADER -->
         </div>
-    </div>
+        <!-- MAIN HEADER -->
+
+        <!-- END MAIN HEADER -->
+    </header>
     <div id="user" class="modal">
         <div id="login">
             <form id="loginform">
@@ -118,7 +162,7 @@
             </form>
         </div>
     </div>
-    <div class="bannerSection">
+    <div class="bannerSection" id="banner">
         <div>
             <img class="slideShow" src="images/banner/Autoart_Banner_with_logo.png">
             <img class="slideShow" src="images/banner/Bburago_Banner.png">
@@ -127,26 +171,29 @@
             <!-- <img class="slideShow" src="images/banner/Banner_Modelcars.jpg"> -->
         </div>
     </div>
-    <div class="specialProducts">
-        <ul class="specialProducts-tabs">
-            <li class="tab" id="featured" onclick="showSpecialProducts('featured')">
-                <a class="tab-title">featured</a>
+
+
+
+    <div class="specialProducts" id="specialProducts">
+        <ul class="specialProducts-tabs" id="closeNav">
+            <li class="tab" id="featured">
+                <a class="tab-title" id="onload" onclick="showSpecialProducts('featured')">featured</a>
             </li>
-            <li class="tab" id="bestselling" onclick="showSpecialProducts('bestselling')">
-                <a class="tab-title">bestselling</a>
+            <li class="tab" id="bestselling">
+                <a class="tab-title" onclick="showSpecialProducts('bestselling')">bestselling</a>
             </li>
-            <li class="tab" onclick="showSpecialProducts('new')">
-                <a class="tab-title">new</a>
+            <li class="tab">
+                <a class="tab-title" onclick="showSpecialProducts('new')">new</a>
             </li>
         </ul>
         <div class="productList-container">
             <ul class="specialProducts-list">
             </ul>
-            <div id="page">
+            <!-- <div id="page">
                 <button>1</button>
                 <button>2</button>
                 <button>3</button>
-            </div>
+            </div> -->
         </div>
     </div>
 

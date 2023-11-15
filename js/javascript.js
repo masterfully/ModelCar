@@ -4,20 +4,18 @@ function currency(num) {
   return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.") + " VND";
 }
 
-function showMenu() {
-  var menuList = ["TOYOTA", "LAMBORGHINI", "MCLAREN" , "PORSCHE" , "FERRARI"];
-  var ul = document.getElementById("navmenu");
-  var li = '<li><a href="index.html">TRANG CHỦ</a></li>';
-  for (var i = 0; i < menuList.length; i++) {
-    li +=
-      '<li><a href="index.html?' +
-      menuList[i].toLowerCase() +
-      '&0">' +
-      menuList[i] +
-      "</a></li>";
-    ul.innerHTML = li;
-  }
-}
+// function showMenu() {
+//   var menuList = ["TOYOTA", "LAMBORGHINI", "MCLAREN" , "PORSCHE" , "FERRARI"];
+//   var ul = document.getElementById("navmenu");
+//   var li = '<li class="navBtn"><a  href="index.html">TRANG CHỦ</a></li>';
+//   for (var i = 0; i < menuList.length; i++) {
+//     li +=
+//       `<li class="navBtn" onclick="showBrandProducts('${menuList[i]}')"><a>` +
+//       menuList[i] +
+//       `</a></li>`;
+//     ul.innerHTML = li;
+//   }
+// }
 function showMenuMobile(){
 	var btn = document.getElementById("btnmenu");
 	if(btn.className==""){
