@@ -1,10 +1,11 @@
 :root {
+
 	--main-bg-color: #fff;
 	--second-bg-color: #f5f5f5;
 	--third-bg-color: #e3e3e3;
 	--grey: #4b4b4b;
 	--black: #000;
-	--red: #c0392b;
+	--red: #dd3036;
 	--top-header-size: 30px;
 	--mid-header-size: 80px;
 	--bottom-header-size: 45px;
@@ -12,7 +13,41 @@
 	--btn-border-color: #000;
 	--btn-color: #fff;
 
+
+	--primary-color: #4834d4;
+	--success-color: #6ab04c;
+	--warning-color: #f0932b;
+	--danger-color: #eb4d4b;
+	--purle-color1: #4D2DB7 ;
+	--purle-color2: #9D44C0 ;
+	--purle-color3: #EC53B0 ;
+
+
+	--light-color: #212529;
+	--light-second-color: #727475;
+	--light-background: #ffffff;
+	--light-second-background: #f1f1f1;
+
+	--dark-color: #909090;
+	--dark-second-color: #f5f6fa;
+	--dark-background: #23242D;
+	--dark-second-background: #181818;
 }
+
+.light {
+	--main-bg-color: var(--light-background);
+	--second-bg-color: var(--light-second-background);
+	--main-color: var(--light-color);
+	--second-color: var(--light-second-color);
+}
+
+.dark {
+	--main-bg-color: var(--dark-background);
+	--second-bg-color: var(--dark-second-background);
+	--main-color: var(--dark-color);
+	--second-color: var(--dark-second-color);
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -26,7 +61,6 @@ body {
 	position: relative;
 	background-color: var(--main-bg-color);
 	overflow-x: hidden;
-	height: 3000px;
 }
 
 button {
@@ -79,9 +113,23 @@ img {
 .top-header a{
 	font-size: 13px;
 }
+.top-header ul.icon-soccial i {
+	display: block;
+	font-size: 1.4rem;
+	transition: 0.5s;
+}
+.top-header ul.icon-soccial i.bxl-facebook-circle{
+	color: #2980b9;
+}
+.top-header ul.icon-soccial i.bxl-youtube{
+	color: red;
+}
+.top-header ul.icon-soccial i.bxl-twitter{
+	color: #2980b9 ;
+}
 ul.icon-soccial > li {
-	margin-right: 10px;
-	padding-right: 10px;
+	margin-right: 2px;
+	padding-right: 14px;
 	width: 50%;
 	height: auto;
 }
@@ -165,7 +213,6 @@ ul.devided > li:last-child {
 	border: 0;
 	background-color: var(--second-bg-color);
 }
-
 .search i {
 	position: absolute;
 	top: 50%;
@@ -177,26 +224,58 @@ ul.devided > li:last-child {
 .user-menu {
 	display: flex;
 }
-
+/*.user-menu button {*/
+/*	color: white;*/
+/*}*/
 .user-menu > li > button {
-	font-size: 30px;
+	font-size: 20px;
 	margin-left: 15px;
 	background-color: var(--red);
+	transform: translateY(20%);
 }
+.bxs-cog:before {
+	font-size: 20px;
+	background-color: var(--red);
 
+}
+.mid-header .user-menu #btnlogout{
+	background-color: #fff;
+	color: #000;
+	list-style-type: none;
+	text-align: center;
+	height: 25px;
+	width: 100px;
+	line-height: 25px;
+	font-weight: normal;
+	border-radius: 20px;
+	display: block;
+	cursor: pointer;
+	margin: 0 auto;
+	animation: bottomup 0.5s;
+	z-index: 100;
+	transform: translateY(10px);
+}
+.mid-header  .user-menu li:hover > #btnlogout{
+	display: block;
+}
+.mid-header .user-menu li > #btnlogout:hover{
+	background-color: var(--third-bg-color);
+	color: #fff;
+}
 .bottom-header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background: var(--main-bg-color);
+	box-shadow: rgba(0,0,0,0.12) 0 1px 4px 1px;
 }
 
 #navmenu {
 	display: flex;
 	height: var(--bottom-header-size);
-	cursor: pointer;
 }
 
-#navmenu li a {
+#navmenu > li > a {
 	display: flex;
 	align-items: center;
 	margin: 0 20px;
@@ -204,7 +283,6 @@ ul.devided > li:last-child {
 	height: 100%;
 	text-transform: uppercase;
 }
-
 
 
 .navBtn:hover {
