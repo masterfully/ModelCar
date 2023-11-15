@@ -197,7 +197,7 @@ function checklogin(){
 				'<li><button onClick="location.href=\'file/cart.html\'"></button></li>'+
 				'<li><button onClick="showSearch()"></button></li>';
 		}
-		document.querySelector('#nav .topnav   ul.right').innerHTML = s;
+		document.querySelector('.mid-header .user-menu').innerHTML = s;
 	}
 }
 function checklogin2(){

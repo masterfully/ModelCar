@@ -22,7 +22,7 @@
 </head>
 <!--  -->
 
-<body onload="checklogin();showSpecialProducts('featured')">
+<body onload="showSpecialProducts('featured');checklogin()">
     <header>
         <!-- MOBILE MENU -->
         <div class="mobile-menu bg-second">
@@ -78,7 +78,7 @@
                 <div class="mid-header container">
                     <img src="./images/icon/logo.png" alt="logo">
                     <div class="search">
-                        <input type="text" placeholder="Serach">
+                        <input type="text" placeholder="Search">
                         <i class='bx bx-search-alt'></i>
                     </div>
                     <div class="user-menu">
@@ -272,6 +272,9 @@
     </div>
     <script src="js/javascript.js"></script>
     <script src="js/productjs.js"></script>
+    <script src="js/adminjs.js"></script>
+    <script src="js/cartjs.js"></script>
+    
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
