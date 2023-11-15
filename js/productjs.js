@@ -83,7 +83,6 @@ localStorage.setItem('product', JSON.stringify(productArray));
 
 
 const specialButton = document.querySelectorAll('.specialProducts .specialProducts-tabs li a');
-console.log(specialButton);
 specialButton.forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelector('.clicked')?.classList.remove('clicked');
@@ -91,7 +90,13 @@ specialButton.forEach(btn => {
     });
 });
 
-
+function quantity_inc(){
+    document.getElementById('quantity_number').value++;
+}
+function quantity_dec(){
+    if(document.getElementById('quantity_number').value>1)
+        document.getElementById('quantity_number').value--;
+}
 
 
 
@@ -116,12 +121,11 @@ function closeProductInfo() {
 }
 
 function showProductInfo(productID) {
-    productID = String(productID);
     var i = getIndex(productID)
     var str2 = "";
     str2 += `<div id="productInfor">
                             <div class="image-container">
-                                <img src="./images/product/${productArray[i].productIMG}" class="product-img">
+                                <img src="../images/product/${productArray[i].productIMG}" class="product-img">
                             </div>
                             <div class="close-button" onclick="closeProductInfo()">
                                 <p>+</p>
@@ -131,10 +135,10 @@ function showProductInfo(productID) {
                                 </h2>
                                 <h4 class="product-price">Price: ${productArray[i].price}</h4>
                                 <h4 class="quantity">quantity</h4>
-                                <button class="quantity-decrease">-</button>
-                                <input type="text" value="1" class="quantity-number">
-                                <button class="quantity-increase">+</button>
-                                <button class="addtocart" >Add to cart</button>
+                                <button class="quantity-decrease" onclick="quantity_dec()">-</button>
+                                <input type="text" value="1" class="quantity-number" id="quantity_number">
+                                <button class="quantity-increase" onclick="quantity_inc()">+</button>
+                                <button class="addtocart" onclick="addToCart('${productArray[i].productID}')">Add to cart</button>
                             </div>
                         </div>`;
     document.querySelector(".productInfor-container").innerHTML = str2;
@@ -217,7 +221,6 @@ function showBrandProducts(Pbrand) {
     }
 }
 const navButton = document.querySelectorAll('#navmenu li a');
-console.log(navButton);
 navButton.forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelector('.navBtn-click')?.classList.remove('navBtn-click');
