@@ -164,7 +164,11 @@ function showSpecialProducts(productType) {
                         </div>
                 </li >`;
         }
-        document.querySelector(".specialProducts-list").innerHTML = str;
+        document.querySelector(".specialProducts-list").innerHTML = str + `<div id="page">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+    </div>;`
     }
     const specialButton = document.querySelectorAll('#onload');
     specialButton.forEach(btn => {
@@ -205,7 +209,11 @@ function showBrandProducts(Pbrand) {
                         </div>
                 </li >`;
         }
-        document.querySelector(".specialProducts-list").innerHTML = str;
+        document.querySelector(".specialProducts-list").innerHTML = str + `<div id="page">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+    </div>;`;
     }
 }
 const navButton = document.querySelectorAll('#navmenu li a');
