@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS</title>
+    <link rel="shortcut icon" href="images/icon/logo_vYW_icon.ico">
+    <link rel="stylesheet" href="../css/styleProduct.css">
+    <link rel="stylesheet" href="../css/styleuser.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleslide.css">
+    <link rel="stylesheet" href="../css/style-footer.css">
+    <link rel="stylesheet" href="../css/post.css">
+</head>
+
+<body onload="showMenu();checklogin()">
+    <div id="nav">
+        <div class="container">
+            <div class="topnav">
+                <ul class="left">
+                    <li><a href="https://www.facebook.com/carmodelstore"><img src="../images/icon/facebookicon.svg"></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/carmodelstore"><img src="../images/icon/instagramicon.svg"></a>
+                    </li>
+                    <li><a href="https://www.youtube.com"><img src="../images/icon/youtubeicon.svg"></a></li>
+                </ul>
+
+                <ul class="right">
+                    <li><button onclick="showform()"><img src="../images/icon/user-icon-svgrepo-com.svg">Sign In or
+                            Register</button></li>
+                </ul>
+            </div>
+            <div class="botnav">
+                <div class="logo"><a href="index.html"><img src="../images/icon/logo.png" alt="CMS"></a></div>
+                <div><button id="btnmenu" onclick="shoMenuMobile()"></button></div>
+                <div class="container">
+                    <div class="top">
+                            <div class="searchbox">
+                                <input type="text" placeholder="" id="search" onKeyUp="search()"><button><img src="../images/icon/searchicon.svg"></button>
+                            </div>
+                            <div class="searchextend">
+
+                            </div>
+                            <div class="serachresult">
+
+                            </div>
+                        
+                        <ul class="bot-right">
+                            <li><button onclick="location.href='file/cart.html'"><img src="../images/icon/carticon.svg"></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="bot">
+                        <ul id="navmenu">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="user" class="modal">
+        <div id="login">
+            <form id="loginform">
+                <button type="button" class="close" onClick="closeform()">+</button>
+                <h2>ĐĂNG NHẬP</h2>
+                <div class="logininfo">
+                    <div class="col">
+                        <label for="usernameLogin">Tên đăng nhập:</label>
+                        <input type="text" id="usernameLogin">
+                        <div id="usernameerror">Bạn chưa nhập tên đăng nhập</div>
+                        <label for="passwordLogin">Mật khẩu:</label>
+                        <input type="password" id="passwordLogin">
+                        <div id="passwordloginerror">Bạn chưa nhập mật khẩu</div>
+                    </div>
+                </div>
+                <button type="submit" id="btnlogin">Login</button>
+                <p>Bạn chưa có tài khoản? <a href="#" onClick="showSignUp()">Đăng ký</a></p>
+            </form>
+        </div>
+        <div id="signup">
+            <form id="signupform">
+                <button type="button" class="close" onClick="closeform()">+</button>
+                <h2>ĐĂNG KÝ</h2>
+                <div class="signupinfo">
+                    <div class="col">
+                        <label for="fullname">Họ và tên: </label>
+                        <input type="text" id="fullname">
+                        <div id="fullnameerror">Bạn chưa nhập họ tên</div>
+                        <label for="address">Địa chỉ: </label>
+                        <input type="text" id="address">
+                        <div id="addresserror">Bạn chưa địa chỉ</div>
+                        <label for="phone">Số điện thoại: </label>
+                        <input type="text" id="phone">
+                        <div id="phoneerror">Bạn chưa nhập số điện thoại</div>
+                    </div>
+                    <div class="col">
+                        <label for="usernameSignUp">Tên đăng nhập: </label>
+                        <input type="text" id="usernameSignUp">
+                        <div id="usererror">Bạn chưa nhập tên đăng nhập</div>
+                        <label for="passwordSignUp">Mật khẩu: </label>
+                        <input type="password" id="passwordSignUp">
+                        <div id="passworderror">Bạn chưa nhập mật khẩu</div>
+                        <label for="passwordSignUp2">Nhập lại mật khẩu: </label>
+                        <input type="password" id="passwordSignUp2">
+                        <div id="password2error">Mật khẩu không trùng khớp</div>
+                    </div>
+                </div>
+                <button type="submit" id="btnsignup">Đăng ký</button>
+                <p>Trở về trang <a href="#" onClick="showLogin()">Đăng nhập</a></p>
+            </form>
+        </div>
+    </div>
+    <div class="wrapper_post">
+        <div class="wrapper_post_top">
+            <div class="item">
+                <img src="../images/post/pos2/1.webp" alt="" id="pic1">
+            </div>
+            <div class="item">
+                <h3>Thông báo Solido - Tháng 6 năm 2022</h3>
+                <p style="text-decoration: underline;">Thông báo Solido về mẫu xe tỷ lệ 1/18</p>
+                <p>Solido đã thông báo về một dàn mẫu xe đa dạng màu sắc trong tỷ lệ 1/18, bao gồm các mẫu xe thể thao nổi bật như Alpine A310 và A110, một số mẫu BMW với livery đua xe và rally đầy màu sắc, cũng như một số mẫu xe và xe tải Pháp độc đáo với livery ấn tượng như Citroen 2CV6 với livery lấy cảm hứng từ Brittany và các mẫu xe tải Renault LF4.</p>
+                <p>Trong bài đăng blog này, chúng tôi sẽ chỉ ra những mẫu xe chúng tôi cho rằng sẽ được ưa chuộng nhất trong cộng đồng sưu tầm mô hình tỷ lệ 1/43 và 1/18.</p>
+                <h3 style="text-decoration: underline;">Tỷ lệ 1/18</h3>
+            </div>
+            <div class="item">
+                <h3>Citroen 2CV6</h3>
+                <img src="../images/post/pos2/2.jpg" alt="">
+                <p>Citroën 2CV6, còn được gọi là "Deux Chevaux," là một chiếc xe nhỏ gọn cổ điển được sản xuất bởi hãng ô tô Pháp Citroën từ năm 1948 đến năm 1990. Với thiết kế đặc trưng và sự đơn giản, 2CV6 đã trở thành biểu tượng của lịch sử ô tô Pháp.</p>
+                <p>2CV6 có ngoại hình quyến rũ và tối giản với hình dáng thân xe tròn, các bánh xe cong và một mái che bằng vải có thể gập lại để trải nghiệm lái xe ngoài trời. Hệ thống treo độc đáo của nó, được biết đến với tên gọi "ripple bonnet" hoặc "umbrella" suspension, mang lại trải nghiệm lái êm ái ngay cả trên địa hình gồ ghề.</p>
+                <img src="../images/post/pos2/3.jpg" alt="">
+                <p>Dưới nắp ca-pô, 2CV6 được trang bị một động cơ hai xi-lanh, làm mát bằng không khí, có dung tích nhỏ và kiểu đối xứng ngang. Con số "6" trong tên gọi của nó đề cập đến các mẫu xe sau này có động cơ cải tiến dung tích 602cc, có khả năng sản sinh khoảng 29 mã lực.</p>
+                <p>Trong suốt quá trình sản xuất, 2CV6 đã trải qua nhiều cải tiến và nâng cấp, bao gồm việc áp dụng hệ thống phanh đĩa, cửa sổ lớn hơn và các tính năng nội thất tinh tế hơn. Mặc dù có những thay đổi này, 2CV6 vẫn giữ vững triết lý ban đầu của mình, đó là cung cấp một phương tiện có giá cả phải chăng, thực dụng và vui vẻ để lái cho đại đa số người dùng.</p>
+                <p>Ngày nay, Citroën 2CV6 được rất nhiều người yêu thích và sưu tầm dưới dạng mô hình, những người đánh giá cao sự quyến rũ cổ điển, nhân vật độc đáo và ý nghĩa lịch sử của nó. Nó tiếp tục gợi lên một cảm giác hoài niệm và sự ngưỡng mộ với sức hấp dẫn bền vững của mình như một biểu tượng của di sản ô tô Pháp.</p>
+                <p> Solido đang sản xuất hai mô hình của chiếc xe Pháp nổi tiếng và biểu tượng này, một chiếc với livery lấy cảm hứng từ Brittany và chiếc kia với sắc màu "Dolly Green" năm 1982.</p>
+            </div>
+            <div class="item">
+                <h3>BMW E36 Coupe </h3>
+                <img src="../images/post/pos2/4.jpg" alt="">
+                <p>Chiếc coupe BMW E36 năm 1994 là một chiếc xe sang trọng, phong cách và tập trung vào hiệu suất, thuộc thế hệ thứ ba của dòng xe BMW 3 Series. Được giới thiệu vào năm 1990, coupe E36 mang đến sự kết hợp hoàn hảo giữa sự thoải mái, tính thể thao và công nghệ tiên tiến, củng cố địa vị của nó trong lòng các đối tác yêu xe.</p> 
+                <p>Thiết kế ngoại thất của chiếc coupe BMW E36 năm 1994 phát radi sự thanh lịch và năng động. Nó có hình dáng mượt mà và khí động học với những đường nét rõ ràng và một mui xe dốc. Lưới tản nhiệt thận định, hệ thống đèn pha tứ giác và bề rộng đóng góp vào vẻ ngoài quyết liệt nhưng tinh tế của nó.</p>
+                <p>Bên dưới nắp ca-pô, coupe E36 cung cấp một loạt các tùy chọn động cơ để phù hợp với sở thích lái xe khác nhau. Phiên bản năm 1994 bao gồm các động cơ như động cơ xi-lanh 4 xếp hàng dung tích 1.8 lít, động cơ xi-lanh 6 xếp hàng dung tích 2.0 lít và một động cơ xi-lanh 6 xếp hàng mạnh mẽ hơn với dung tích 2.5 lít trong biến thể cao cấp nhất là M3. Những động cơ này mang lại hiệu suất ấn tượng, kết hợp sự truyền động mượt mà với khả năng xử lý tương tác và động học lái xuất sắc.</p>
+                <img src="../images/post/pos2/5.jpg" alt="">
+                <p>An toàn luôn là một ưu tiên hàng đầu đối với coupe E36, và nó được trang bị các tính năng an toàn đa dạng như túi khí phía trước kép, hệ thống phanh ABS và hệ thống kiểm soát ổn định. Ngoài ra, các tùy chọn bổ sung như kiểm soát lực kéo và túi khí bên cạnh cũng tăng cường thêm tính an toàn của xe.</p>
+                <p>Nhìn chung, chiếc coupe BMW E36 năm 1994 đại diện cho sự cân đối hài hòa giữa sang trọng và hiệu suất. Thiết kế vượt thời gian, trải nghiệm lái hấp dẫn và nội thất được trang bị tốt tiếp tục khiến nó trở thành một sự lựa chọn đáng mong muốn trong số các nhà sưu tập mô hình xe.</p>
+                <p>Solido đã công bố hai mẫu xe BMW E36, trong các livery đua hấp dẫn.</p>
+            </div>
+            <div class="item">
+                <h3>Alpine A310 Pack GT</h3>
+                <img src="../images/post/pos2/6.jpg" alt="">
+                <p>Alpine A310 Pack GT là một chiếc xe thể thao đáng chú ý, tóm gọn bản chất của hiệu suất và phong cách. Do hãng sản xuất Pháp Alpine sản xuất vào cuối những năm 1970, A310 Pack GT đại diện cho phiên bản hoàn thiện hơn của mẫu xe gốc A310, tích hợp nhiều nâng cấp và cải tiến.</p>
+                <p>A310 Pack GT sở hữu thiết kế khí động học và cuốn hút, tạo ra cảm giác tốc độ và sự nhanh nhẹn. Thiết kế thân xe mượt mà, mặt trước thấp và đèn pha tự động mở tạo nên một diện mạo thể thao và vẫn cổ điển. Phiên bản GT có những nâng cấp bổ sung như cánh bánh xe mở rộng, lốp rộng hơn và cánh spoiler sau nổi bật, làm tăng thêm tính chất hướng tới hiệu suất của chiếc xe</p>
+                <p>Dưới nắp ca-pô, A310 Pack GT được trang bị động cơ nằm ở giữa, thường là một động cơ V6. Bố cục này, kết hợp với cấu trúc nhẹ, mang lại khả năng vận hành tuyệt vời và phân bố trọng lượng cân đối. Công suất của động cơ thay đổi theo từng phiên bản khác nhau, dao động từ khoảng 150 đến 190 mã lực, mang đến khả năng tăng tốc và tốc độ cao đầy hứng khởi.</p>
+                <p>Solido đã công bố một mô hình của Alpine A110, dự kiến ​​phát hành vào cuối năm. Mô hình sẽ được hoàn thiện màu đỏ và có nhiều chi tiết nổi bật tương tự như trên chiếc xe thực tế.</p>
+            </div>
+            <div class="item">
+                <h3>BMW M30 M3</h3>
+                <img src="../images/post/pos2/7.jpg" alt="">
+                <p>Chiếc BMW E30 M3 là một chiếc xe thể thao biểu tượng đã để lại dấu ấn không thể phai trong lịch sử ô tô. Giới thiệu vào năm 1986, E30 M3 là phiên bản M3 đầu tiên và nhanh chóng khẳng định vị thế của mình là một tiêu chuẩn về hiệu suất và độ chính xác. Thiết kế mạnh mẽ và hầm hố, với lốp xe nở, lưới tản nhiệt trước đặc trưng và cánh spoiler sau, nhấn mạnh nguồn gốc đua xe của nó và làm nổi bật so với các mẫu E30 thông thường.</p>
+                <p>Động cơ chủ lực của E30 M3 là một động cơ xi-lanh 4 xếp hàng dung tích 2.3 lít, có nguồn gốc từ bộ phận đua xe của BMW. Với công suất khoảng 200 mã lực, động cơ này đẩy M3 với tốc độ và đáp ứng ấn tượng, mang lại khả năng tăng tốc hứng khởi và trải nghiệm lái xe thú vị. Hệ thống treo được điều chỉnh tốt, hệ thống phanh nâng cấp và hệ thống chuyển động giới hạn đảm bảo khả năng xử lý xuất sắc và khả năng cua chính xác.</p>
+                <p>Solido đã công bố một chiếc BMW M30, trong livery đua FINA Motor Oil nổi bật, như đã thấy tại Monte Carlo vào năm 1989.</p>
+                <p>Điều thực sự làm nổi bật A110 là cấu trúc nhẹ của nó. Khung gầm được làm từ nhôm, đóng góp vào tính linh hoạt và khả năng xử lý linh hoạt đáng kinh ngạc. Với trọng lượng khoảng 2.400 pound, A110 đạt được tỷ lệ công suất/trọng lượng xuất sắc, tạo điều kiện cho trải nghiệm lái xe mạnh mẽ và hấp dẫn.</p>
+            </div>
+            <div class="item">
+                <h3>Alpine A110</h3>
+                <img src="../images/post/pos2/8.jpg" alt="">
+                <p>Chiếc Alpine A110 năm 2019 là một phiên bản hiện đại của chiếc xe thể thao Alpine cổ điển từ những năm 1960. Mang lại tên gọi biểu tượng, A110 thể hiện tinh thần của sự nhẹ nhàng và niềm vui khi lái xe. Với thiết kế mượt mà và khí động học, A110 kết hợp những đặc điểm thiết kế cổ điển với các yếu tố đương đại, tạo nên một chiếc xe thể thao nổi bật và độc đáo từ mặt hình thức.</p>
+                <p>Dưới nắp ca-pô, A110 được trang bị động cơ xi-lanh 4 xếp hàng 1.8 lít, được trang bị công nghệ tăng áp, sản sinh khoảng 248 mã lực. Công suất này được truyền đến bánh xe sau thông qua hộp số tự động 7 cấp ly hợp kép, giúp A110 đạt được khả năng tăng tốc ấn tượng và chuyển số chính xác.</p>
+            </div>
+            
+        </div>
+        <div class="wrapper_post_bot">
+            <h1 class="wrapper_post_bot_title">Các Bài Viết Gần đây</h1>
+            <div class="wrapper_post_bot_content">
+                <div class="wrapper_post_bot_content_item">
+                    <a href="../post/index1.html">
+                        <img src="../images/post/pos1/1.png" alt="">
+                    </a>
+                    <strong class="wrapper_post_bot_content_item_sub">Những chuyến đi không thể quên: Top 10 siêu xe của thập kỷ 2020</strong>
+                    <div class="wrapper_post_bot_content_item_sub1">Những năm đầu thập kỷ 2020 đánh dấu một giai đoạn đầy sức sống trong thế giới ô tô, nơi các nhà sản xuất kết hợp sức mạnh vượt ...</div>
+                    <div class="wrapper_post_bot_content_item_sub2">
+                        <div class="wrapper_post_bot_content_item_sub2_left"><a href="../post/index1.html">Đọc thêm</a></div>
+                        <div class="wrapper_post_bot_content_item_sub2_right">Tác giả: Adam</div>
+                    </div>
+                </div>
+                <div class="wrapper_post_bot_content_item">
+                    <a href="../post/index2.html">
+                        <img src="../images/post/pos2/1.webp" alt="">
+                    </a>
+                    <strong class="wrapper_post_bot_content_item_sub">Thông báo Solido - Tháng 6 năm 2022</strong>
+                    <div class="wrapper_post_bot_content_item_sub1">Solido đã thông báo về một dàn mẫu xe đa dạng màu sắc trong tỷ lệ 1/18, bao gồm các mẫu xe thể thao nổi bật như Alpine A310 và...</div>
+                    <div class="wrapper_post_bot_content_item_sub2">
+                        <div class="wrapper_post_bot_content_item_sub2_left"><a href="../post/index2.html">Đọc thêm</a></div>
+                        <div class="wrapper_post_bot_content_item_sub2_right">Tác giả: Adam</div>
+                    </div>
+                </div>
+                <div class="wrapper_post_bot_content_item">
+                    <a href="../post/index3.html">
+                        <img src="../images/post/pos3/1.png" alt="">
+                    </a>
+                    <strong class="wrapper_post_bot_content_item_sub">Sao bạn nên mua các mô hình xe đua F1?</strong>
+                    <div class="wrapper_post_bot_content_item_sub1">Mô hình xe đua Formula One (F1), đỉnh cao của môn thể thao đua xe, có một cộng đồng fan hâm mộ lớn và nhiệt huyết trên toàn thế...</div>
+                    <div class="wrapper_post_bot_content_item_sub2">
+                        <div class="wrapper_post_bot_content_item_sub2_left"><a href="../post/index3.html">Đọc thêm</a></div>
+                        <div class="wrapper_post_bot_content_item_sub2_right">Tác giả: Adam</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-footer"  style="height: 800px;">
+        <footer id="footer">
+            <div class="footer__top">
+                <div class="footer__top__left">
+                    <h3>THEO DÕI ĐỂ NHẬN THÔNG TIN MỚI</h3>
+                </div>
+                <div class="footer__top__right">
+                    <form id="footer__top__right__searchBox">
+                        <input id="footer__top__right__searchBox__searchText" type="email" placeholder="bhhh@gmail.com">
+                        <button id="footer__top__right__searchBox__searchButton" type="submit"><i class="fa-regular fa-bell" style="color: white;"></i>
+                            ĐĂNG KÝ</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer__mid">
+                <div class="footer__mid__left" >
+                    <span class="footer__mid__left__logo">
+                        <!-- <img src="https://cdn11.bigcommerce.com/s-hmjw8fgkuv/images/stencil/180x70/cms_logo_new_1660047597__87732.original.png"
+                            alt="logoCMS"> -->
+                        <img src="../images/icon/logo.png" alt="CMS">
+                    </span>
+                    <ul class="footer__mid__left__info">
+                        <li class="footer__mid__left__info__sec1">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="footer__mid__left__info__sec1__item">
+                                🏠 Nhà sản xuất mô hình
+                                <br>xe ô tô và xe máy.
+                                <br>1827 An Dương Vương, Q5, TP.HCM
+                                <br>
+                                <br>
+                                Số thuế VAT: SG123456789
+                                <br>
+                                <br>
+                                Giao hàng toàn quốc!!
+                            </div>
+                        </li>
+                        <li class="footer__mid__left__info_sec2">
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="" class="footer__mid__left__info__sec2__item">Gọi chúng tôi tại 0123 456 789 </a>
+                        </li>
+                    </ul>
+                    <ul class="footer__mid__left__socialLink">
+                        <li></li>
+                        <a href=""><i class="fa-brands fa-square-instagram fa-2xl"></i></a>
+                        <a href=""><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="footer__mid__right">
+                    <div class="footer__mid__right__col">
+                        <h3>VỀ CMS</h3>
+                        <ul class="footer__mid__right__col__aboutUs">
+                            <li>
+                                <button id="footer__mid__right__col__aboutUs__story">Câu chuyện CMS</button>
+                                <div class="footer__mid__right__col__aboutUs__wrapper-content" style="display: none;">
+                                    <div class="footer__mid__right__col__aboutUs__wrapper-content__top-content">
+                                        <div class="footer__mid__right__col__aboutUs__wrapper-content__top-content__top-content-left"></div>
+                                        <div class="footer__mid__right__col__aboutUs__wrapper-content__top-content__top-content-right">
+                                            <i class="fa-solid fa-xmark" style="color: #000000;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="footer__mid__right__col__aboutUs__wrapper-content__content">
+                                        <h3>VỀ CHÚNG TÔI</h3>
+                                        <p>Chúng tôi là cửa hàng mô hình ô tô! Chúng tôi bắt đầu vào năm 2021 tại
+                                            Birmingham, Vương quốc Anh, với niềm đam mê ô tô. Chúng tôi ở đây để cung
+                                            cấp dịch vụ xuất sắc và nhiều mẫu mã, ô tô điều khiển từ xa và ô tô có khe
+                                            cắm. Lựa chọn của chúng tôi bao gồm từ những chiếc xe mô hình đua xe và F1
+                                            cho đến những chiếc xe đánh bạc Batman tưởng tượng. Nếu bạn đang theo đuổi
+                                            một sản phẩm cụ thể, đừng ngần ngại gọi
+                                            điện hoặc gửi email cho chúng tôi và chúng tôi luôn sẵn sàng trợ giúp 7 ngày
+                                            một tuần. Chúng tôi chuyên đặt hàng qua thư, tuy nhiên chúng tôi rất vui
+                                            được mời bạn đến văn phòng của chúng tôi, nhưng vui lòng cho chúng tôi biết
+                                            khi nào bạn muốn ghé thăm.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="">Cửa hàng</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__mid__right__col">
+                        <h3>PHÂN LOẠI</h3>
+                        <ul class="footer__mid__right__col__categories">
+                            <li><a href="">Gợi ý</a></li>
+                            <li><a href="">Theo giá</a></li>
+                            <li><a href="">Ưu đãi</a></li>
+                            <li><a href="">Thương hiệu</a></li>
+                            <li><a href="">Kích thước</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__mid__right__col">
+                        <h3>HÃNG PHỔ BIẾN</h3>
+                        <ul class="footer__mid__right__col__brands">
+                            <li>Toyota</li>
+                            <li>Lamborghini</li>
+                            <li>McLaren</li>
+                            <li>Ferrari</li>
+                            <li>Porsche</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bot">
+                <div class="footer__bot__left">
+                    <h5>&copy; 2023 Car Model Store.</h5>
+                </div>
+                <div class="footer__bot__right">
+                    <div class="img"><img src="../images/footer-img/shoopee.webp" alt="pic1" height="30px" width="35px"></div>
+                    <div class="img"><img src="../images/footer-img/visa.svg" alt="pic2" height="30px" width="35px"></div>
+                    <div class="img"><img src="../images/footer-img/apple-pay.svg" alt="pic3" height="30px" width="35px"></div>
+                    <div class=" img"><img src="../images/footer-img/MoMo_Logo.png" alt="pic4" height="30px" width="35px"></div>
+                    <div class=" img"><img src="../images/footer-img/zalo.png" alt="pic5" height="30px" width="35px"></div>
+                    <div class="img"><img src="../images/footer-img/mastercard_payment_method_icon_142750.png" alt="pic6" height="30px"width="35px"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="../js/main-footer.js"></script>
+    <script src="../js/javascript.js"></script>
+</body>
+
+</html>

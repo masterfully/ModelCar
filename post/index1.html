@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS</title>
+    <link rel="shortcut icon" href="images/icon/logo_vYW_icon.ico">
+    <link rel="stylesheet" href="../css/styleProduct.css">
+    <link rel="stylesheet" href="../css/styleuser.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleslide.css">
+    <link rel="stylesheet" href="../css/style-footer.css">
+    <link rel="stylesheet" href="../css/post.css">
+</head>
+
+<body onload="showMenu();checklogin()">
+    <div id="nav">
+        <div class="container">
+            <div class="topnav">
+                <ul class="left">
+                    <li><a href="https://www.facebook.com/carmodelstore"><img src="../images/icon/facebookicon.svg"></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/carmodelstore"><img src="../images/icon/instagramicon.svg"></a>
+                    </li>
+                    <li><a href="https://www.youtube.com"><img src="../images/icon/youtubeicon.svg"></a></li>
+                </ul>
+
+                <ul class="right">
+                    <li><button onclick="showform()"><img src="../images/icon/user-icon-svgrepo-com.svg">Sign In or
+                            Register</button></li>
+                </ul>
+            </div>
+            <div class="botnav">
+                <div class="logo"><a href="index.html"><img src="../images/icon/logo.png" alt="CMS"></a></div>
+                <div><button id="btnmenu" onclick="shoMenuMobile()"></button></div>
+                <div class="container">
+                    <div class="top">
+                            <div class="searchbox">
+                                <input type="text" placeholder="" id="search" onKeyUp="search()"><button><img src="../images/icon/searchicon.svg"></button>
+                            </div>
+                            <div class="searchextend">
+
+                            </div>
+                            <div class="serachresult">
+
+                            </div>
+                        
+                        <ul class="bot-right">
+                            <li><button onclick="location.href='file/cart.html'"><img src="../images/icon/carticon.svg"></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="bot">
+                        <ul id="navmenu">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="user" class="modal">
+        <div id="login">
+            <form id="loginform">
+                <button type="button" class="close" onClick="closeform()">+</button>
+                <h2>ĐĂNG NHẬP</h2>
+                <div class="logininfo">
+                    <div class="col">
+                        <label for="usernameLogin">Tên đăng nhập:</label>
+                        <input type="text" id="usernameLogin">
+                        <div id="usernameerror">Bạn chưa nhập tên đăng nhập</div>
+                        <label for="passwordLogin">Mật khẩu:</label>
+                        <input type="password" id="passwordLogin">
+                        <div id="passwordloginerror">Bạn chưa nhập mật khẩu</div>
+                    </div>
+                </div>
+                <button type="submit" id="btnlogin">Login</button>
+                <p>Bạn chưa có tài khoản? <a href="#" onClick="showSignUp()">Đăng ký</a></p>
+            </form>
+        </div>
+        <div id="signup">
+            <form id="signupform">
+                <button type="button" class="close" onClick="closeform()">+</button>
+                <h2>ĐĂNG KÝ</h2>
+                <div class="signupinfo">
+                    <div class="col">
+                        <label for="fullname">Họ và tên: </label>
+                        <input type="text" id="fullname">
+                        <div id="fullnameerror">Bạn chưa nhập họ tên</div>
+                        <label for="address">Địa chỉ: </label>
+                        <input type="text" id="address">
+                        <div id="addresserror">Bạn chưa địa chỉ</div>
+                        <label for="phone">Số điện thoại: </label>
+                        <input type="text" id="phone">
+                        <div id="phoneerror">Bạn chưa nhập số điện thoại</div>
+                    </div>
+                    <div class="col">
+                        <label for="usernameSignUp">Tên đăng nhập: </label>
+                        <input type="text" id="usernameSignUp">
+                        <div id="usererror">Bạn chưa nhập tên đăng nhập</div>
+                        <label for="passwordSignUp">Mật khẩu: </label>
+                        <input type="password" id="passwordSignUp">
+                        <div id="passworderror">Bạn chưa nhập mật khẩu</div>
+                        <label for="passwordSignUp2">Nhập lại mật khẩu: </label>
+                        <input type="password" id="passwordSignUp2">
+                        <div id="password2error">Mật khẩu không trùng khớp</div>
+                    </div>
+                </div>
+                <button type="submit" id="btnsignup">Đăng ký</button>
+                <p>Trở về trang <a href="#" onClick="showLogin()">Đăng nhập</a></p>
+            </form>
+        </div>
+    </div>
+    <div class="wrapper_post">
+        <div class="wrapper_post_top">
+            <div class="item">
+                <img src="../images/post/pos1/1.png" alt="" id="pic1">
+            </div>
+            <div class="item">
+                <h3>Những chuyến đi không thể quên: Top 10 siêu xe của thập kỷ 2020</h3>
+                <p>Những năm đầu thập kỷ 2020 đánh dấu một giai đoạn đầy sức sống trong thế giới ô tô, nơi các nhà sản xuất kết hợp sức mạnh vượt trội, công nghệ tiên tiến và thiết kế tuyệt đẹp để tạo ra một thế hệ siêu xe mới. Từ đường đua đến đường phố, những chiếc xe này không chỉ phá vỡ các ranh giới về tốc độ - chúng đã tái định nghĩa ý nghĩa của việc trở thành một siêu xe. Trên hành trình hồi hộp này, chúng ta sẽ khám phá top 10 siêu xe đã để lại dấu ấn không thể quên trên bức tranh ô tô của thời điểm đó.</p>
+            </div>
+            <div class="item">
+                <img src="../images/post/pos1/2.avif" alt="">
+                <p><strong>Ferrari SF90 Stradale:</strong> Ferrari SF90 Stradale tượng trưng cho sự kết hợp hoàn hảo giữa sự điện hoá và hiệu suất của Ý. Trang bị động cơ V8 tăng áp và ba động cơ điện, nó sở hữu công suất kết hợp đáng kinh ngạc giúp nó tăng từ 0 lên 60 dặm/giờ trong một khoảng thời gian khiến người ta trầm trồ. Chế độ chỉ sử dụng điện của nó mang lại trải nghiệm lái êm ái trong thành phố, trong khi sự phát huy toàn bộ công suất tạo ra một bản giao hưởng hiệu suất, gợi nhớ cho chúng ta tại sao Ferrari giữ vị trí huyền thoại của mình.</p>
+                <div></div>
+            </div>
+            <div class="item">
+                <img src="../images/post/pos1/3.avif" alt="">
+                <p><Strong>McLaren 765LT:</Strong> McLaren 765LT tái định nghĩa khái niệm về hiệu suất tập trung vào đường đua. Với động cơ V8 tăng áp kép dung tích 4.0 lít sản sinh một lượng mã lực đáng kinh ngạc, nó đạt tốc độ 60 mph chỉ trong vài giây. Kết cấu nhẹ của xe, các cải tiến về động lực học và hệ thống treo tiên tiến đảm bảo mỗi lần xoay vô lăng đều được đáp ứng với sự chính xác và hứng khởi, biến nó thành một kiệt tác động cơ động đẳng cấp trên cả đường đua và đường phố.</p>
+            </div>
+            <div class="item">
+                <img src="../images/post/pos1/4.avif" alt="">
+                <p><strong>Porsche 911 GT3 RS (992):</strong> Porsche 911 GT3 RS là sự tượng trưng cho di sản đua xe của thương hiệu này. Động cơ 6 xi-lanh phẳng tự nhiên dung tích 4.0 lít không tăng áp mang đến một trải nghiệm lái mạnh mẽ, phối hợp với việc điều chỉnh khung gầm tỉ mỉ và động lực học tạo ra mức lực nén chưa từng có. Là một minh chứng cho sự cam kết của Porsche đối với niềm vui lái xe, 911 GT3 RS cung cấp một mối liên kết không thể sánh bằng giữa người lái và chiếc xe.</p>
+            </div>
+            <div class="item">
+                <img src="../images/post/pos1/5.avif" alt="">
+                <p><strong>Lamborghini Huracán Performante:</strong> Lamborghini Huracán Performante kết hợp công nghệ tiên tiến với phong cách Ý. Động cơ V10 không tăng áp của nó tạo ra một bản giao hưởng của tiếng rống, trong khi động lực học tiên tiến và hệ thống hoạt động khiến nó trở thành một đối thủ đáng gờm trên đường đua. Performante giữ kỷ lục vòng Nürburgring cho một chiếc xe sản xuất, thể hiện sự tài năng của nó và thiết lập một tiêu chuẩn mới cho hiệu suất siêu xe.</p>
+            </div>
+            <div class="item">
+                <img src="../images/post/pos1/6.avif" alt="">
+                <p><strong>Aston Martin Vantage AMR Pro:</strong> Aston Martin Vantage AMR Pro là một kiệt tác sản xuất giới hạn, được thiết kế để mang đến hiệu suất không thể vượt qua trên đường đua. Với động cơ V8 tăng áp kép dung tích 4.0 lít, nó sở hữu cả sức mạnh và sự tinh tế. Hộp số sàn của nó kết nối những người đam mê lái xe vào một vũ điệu giữa con người và máy móc, khiến mỗi lần chuyển số trở thành một cuộc kỷ niệm về sự thành thạo trong lái xe.</p>
+            </div>
+            <div class="item">
+                <img src="../images/post/pos1/7.avif" alt="">
+                <p><strong>Bugatti Chiron:</strong> Bugatti Chiron tiếp tục di sản về tốc độ cực độ và sang trọng. Với động cơ W16 tăng áp tứ trục dung tích 8.0 lít và công suất trên 1.500 mã lực, nó đạt được tốc độ có vẻ như hư ảo. Được chế tạo tỉ mỉ và tràn đầy những điểm nhấn sang trọng, Chiron là một minh chứng cho sự xuất sắc về kỹ thuật mà đẩy ranh giới về những gì có thể làm được.</p>
+            </div>
+            <div class="item">
+                <img src="../images/post/pos1/8.webp" alt="">
+                <p><strong>Koenigsegg Gemera:</strong> Koenigsegg Gemera làm đảo lộn các quy ước với cấu trúc bố trí bốn chỗ ngồi và động cơ hybrid. Động cơ ba xi-lanh của nó được hỗ trợ bởi các động cơ điện, tạo ra một lượng mã lực kết hợp đáng kinh ngạc. Kết hợp sự sang trọng, bền vững và hiệu suất, Gemera là một ví dụ điển hình cho sự tận tâm của Koenigsegg đối với sự đổi mới.</p>
+            </div>
+            <div class="item">
+                <img src="../images/post/pos1/9.jpg" alt="">
+                <p><strong>Lexus LC 500:</strong> Lexus gia nhập thị trường siêu xe với mẫu xe LC 500, mang đến sự kết hợp giữa thiết kế nổi bật và sức mạnh của động cơ V8. Động cơ tự nhiên không tăng áp của nó mang lại hiệu suất tinh tế nhưng hứng khởi, phù hợp với một không gian nội thất sang trọng đặc biệt, tạo nên một chiếc xe du lịch xa hoàn hảo.</p>
+            </div>
+            <div class="item">
+                <img src="../images/post/pos1/10.avif" alt="">
+                <p><strong>Ford GT:</strong> Ford GT tôn vinh người tiền nhiệm huyền thoại của nó trong khi chấp nhận kỹ thuật hiện đại. Động cơ V6 tăng áp kép và thiết kế động lực học tạo ra lực nén vô cùng mạnh mẽ, kết quả là một chiếc xe vừa ấn tượng trên đường đua vừa lộng lẫy trên đường phố.</p>
+            </div>
+            <div class="item">
+                <img src="../images/post/pos1/11.webp" alt="">
+                <p><strong>Nissan GT-R Nismo:</strong> Nissan GT-R Nismo tiếp tục chứng tỏ sự xuất sắc về công nghệ. Với động cơ V6 tăng áp kép được thủ công chế tạo và hệ thống dẫn động bốn bánh toàn diện tiên tiến, nó mang lại sự bám đường và hiệu suất vượt trội. Rufus "supercar killer" của nó vẫn còn tồn tại, củng cố vị thế của nó như một biểu tượng về tốc độ. Những năm đầu thập kỷ 2020 đã mang lại cho chúng ta một loạt siêu xe kết hợp sức mạnh, đổi mới và thiết kế để định nghĩa lại sự xuất sắc trong ngành công nghiệp ô tô. Từ siêu xe hybrid đến những chiếc xe tập trung vào đường đua, mỗi chiếc xe này đã để lại dấu ấn không thể xóa nhòa trên ngành công nghiệp, mở đường cho cảnh quan ô tô đáng kinh ngạc tiếp tục phát triển ngày nay.</p>
+            </div>
+        </div>
+
+        <div class="wrapper_post_bot">
+            <h1 class="wrapper_post_bot_title">Các Bài Viết Gần đây</h1>
+            <div class="wrapper_post_bot_content">
+                <div class="wrapper_post_bot_content_item">
+                    <a href="../post/index1.html">
+                        <img src="../images/post/pos1/1.png" alt="">
+                    </a>
+                    <strong class="wrapper_post_bot_content_item_sub">Những chuyến đi không thể quên: Top 10 siêu xe của thập kỷ 2020</strong>
+                    <div class="wrapper_post_bot_content_item_sub1">Những năm đầu thập kỷ 2020 đánh dấu một giai đoạn đầy sức sống trong thế giới ô tô, nơi các nhà sản xuất kết hợp sức mạnh vượt ...</div>
+                    <div class="wrapper_post_bot_content_item_sub2">
+                        <div class="wrapper_post_bot_content_item_sub2_left"><a href="../post/index1.html">Đọc thêm</a></div>
+                        <div class="wrapper_post_bot_content_item_sub2_right">Tác giả: Adam</div>
+                    </div>
+                </div>
+                <div class="wrapper_post_bot_content_item">
+                    <a href="../post/index2.html">
+                        <img src="../images/post/pos2/1.webp" alt="">
+                    </a>
+                    <strong class="wrapper_post_bot_content_item_sub">Thông báo Solido - Tháng 6 năm 2022</strong>
+                    <div class="wrapper_post_bot_content_item_sub1">Solido đã thông báo về một dàn mẫu xe đa dạng màu sắc trong tỷ lệ 1/18, bao gồm các mẫu xe thể thao nổi bật như Alpine A310 và...</div>
+                    <div class="wrapper_post_bot_content_item_sub2">
+                        <div class="wrapper_post_bot_content_item_sub2_left"><a href="../post/index2.html">Đọc thêm</a></div>
+                        <div class="wrapper_post_bot_content_item_sub2_right">Tác giả: Adam</div>
+                    </div>
+                </div>
+                <div class="wrapper_post_bot_content_item">
+                    <a href="../post/index3.html">
+                        <img src="../images/post/pos3/1.png" alt="">
+                    </a>
+                    <strong class="wrapper_post_bot_content_item_sub">Sao bạn nên mua các mô hình xe đua F1?</strong>
+                    <div class="wrapper_post_bot_content_item_sub1">Mô hình xe đua Formula One (F1), đỉnh cao của môn thể thao đua xe, có một cộng đồng fan hâm mộ lớn và nhiệt huyết trên toàn thế...</div>
+                    <div class="wrapper_post_bot_content_item_sub2">
+                        <div class="wrapper_post_bot_content_item_sub2_left"><a href="../post/index3.html">Đọc thêm</a></div>
+                        <div class="wrapper_post_bot_content_item_sub2_right">Tác giả: Adam</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-footer"  style="height: 800px;">
+        <footer id="footer">
+            <div class="footer__top">
+                <div class="footer__top__left">
+                    <h3>THEO DÕI ĐỂ NHẬN THÔNG TIN MỚI</h3>
+                </div>
+                <div class="footer__top__right">
+                    <form id="footer__top__right__searchBox">
+                        <input id="footer__top__right__searchBox__searchText" type="email" placeholder="bhhh@gmail.com">
+                        <button id="footer__top__right__searchBox__searchButton" type="submit"><i class="fa-regular fa-bell" style="color: white;"></i>
+                            ĐĂNG KÝ</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer__mid">
+                <div class="footer__mid__left" >
+                    <span class="footer__mid__left__logo">
+                        <!-- <img src="https://cdn11.bigcommerce.com/s-hmjw8fgkuv/images/stencil/180x70/cms_logo_new_1660047597__87732.original.png"
+                            alt="logoCMS"> -->
+                        <img src="../images/icon/logo.png" alt="CMS">
+                    </span>
+                    <ul class="footer__mid__left__info">
+                        <li class="footer__mid__left__info__sec1">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="footer__mid__left__info__sec1__item">
+                                🏠 Nhà sản xuất mô hình
+                                <br>xe ô tô và xe máy.
+                                <br>1827 An Dương Vương, Q5, TP.HCM
+                                <br>
+                                <br>
+                                Số thuế VAT: SG123456789
+                                <br>
+                                <br>
+                                Giao hàng toàn quốc!!
+                            </div>
+                        </li>
+                        <li class="footer__mid__left__info_sec2">
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="" class="footer__mid__left__info__sec2__item">Gọi chúng tôi tại 0123 456 789 </a>
+                        </li>
+                    </ul>
+                    <ul class="footer__mid__left__socialLink">
+                        <li></li>
+                        <a href=""><i class="fa-brands fa-square-instagram fa-2xl"></i></a>
+                        <a href=""><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="footer__mid__right">
+                    <div class="footer__mid__right__col">
+                        <h3>VỀ CMS</h3>
+                        <ul class="footer__mid__right__col__aboutUs">
+                            <li>
+                                <button id="footer__mid__right__col__aboutUs__story">Câu chuyện CMS</button>
+                                <div class="footer__mid__right__col__aboutUs__wrapper-content" style="display: none;">
+                                    <div class="footer__mid__right__col__aboutUs__wrapper-content__top-content">
+                                        <div class="footer__mid__right__col__aboutUs__wrapper-content__top-content__top-content-left"></div>
+                                        <div class="footer__mid__right__col__aboutUs__wrapper-content__top-content__top-content-right">
+                                            <i class="fa-solid fa-xmark" style="color: #000000;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="footer__mid__right__col__aboutUs__wrapper-content__content">
+                                        <h3>VỀ CHÚNG TÔI</h3>
+                                        <p>Chúng tôi là cửa hàng mô hình ô tô! Chúng tôi bắt đầu vào năm 2021 tại
+                                            Birmingham, Vương quốc Anh, với niềm đam mê ô tô. Chúng tôi ở đây để cung
+                                            cấp dịch vụ xuất sắc và nhiều mẫu mã, ô tô điều khiển từ xa và ô tô có khe
+                                            cắm. Lựa chọn của chúng tôi bao gồm từ những chiếc xe mô hình đua xe và F1
+                                            cho đến những chiếc xe đánh bạc Batman tưởng tượng. Nếu bạn đang theo đuổi
+                                            một sản phẩm cụ thể, đừng ngần ngại gọi
+                                            điện hoặc gửi email cho chúng tôi và chúng tôi luôn sẵn sàng trợ giúp 7 ngày
+                                            một tuần. Chúng tôi chuyên đặt hàng qua thư, tuy nhiên chúng tôi rất vui
+                                            được mời bạn đến văn phòng của chúng tôi, nhưng vui lòng cho chúng tôi biết
+                                            khi nào bạn muốn ghé thăm.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="">Cửa hàng</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__mid__right__col">
+                        <h3>PHÂN LOẠI</h3>
+                        <ul class="footer__mid__right__col__categories">
+                            <li><a href="">Gợi ý</a></li>
+                            <li><a href="">Theo giá</a></li>
+                            <li><a href="">Ưu đãi</a></li>
+                            <li><a href="">Thương hiệu</a></li>
+                            <li><a href="">Kích thước</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__mid__right__col">
+                        <h3>HÃNG PHỔ BIẾN</h3>
+                        <ul class="footer__mid__right__col__brands">
+                            <li>Toyota</li>
+                            <li>Lamborghini</li>
+                            <li>McLaren</li>
+                            <li>Ferrari</li>
+                            <li>Porsche</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bot">
+                <div class="footer__bot__left">
+                    <h5>&copy; 2023 Car Model Store.</h5>
+                </div>
+                <div class="footer__bot__right">
+                    <div class="img"><img src="../images/footer-img/shoopee.webp" alt="pic1" height="30px" width="35px"></div>
+                    <div class="img"><img src="../images/footer-img/visa.svg" alt="pic2" height="30px" width="35px"></div>
+                    <div class="img"><img src="../images/footer-img/apple-pay.svg" alt="pic3" height="30px" width="35px"></div>
+                    <div class=" img"><img src="../images/footer-img/MoMo_Logo.png" alt="pic4" height="30px" width="35px"></div>
+                    <div class=" img"><img src="../images/footer-img/zalo.png" alt="pic5" height="30px" width="35px"></div>
+                    <div class="img"><img src="../images/footer-img/mastercard_payment_method_icon_142750.png" alt="pic6" height="30px"width="35px"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="../js/main-footer.js"></script>
+    <script src="../js/javascript.js"></script>
+</body>
+
+</html>

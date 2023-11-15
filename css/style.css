@@ -61,6 +61,7 @@ body {
 	position: relative;
 	background-color: var(--main-bg-color);
 	overflow-x: hidden;
+	height: 3000px;
 }
 
 button {
@@ -273,6 +274,7 @@ ul.devided > li:last-child {
 #navmenu {
 	display: flex;
 	height: var(--bottom-header-size);
+	cursor: pointer;
 }
 
 #navmenu > li > a {

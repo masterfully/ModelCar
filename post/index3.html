@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS</title>
+    <link rel="shortcut icon" href="images/icon/logo_vYW_icon.ico">
+    <link rel="stylesheet" href="../css/styleProduct.css">
+    <link rel="stylesheet" href="../css/styleuser.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleslide.css">
+    <link rel="stylesheet" href="../css/style-footer.css">
+    <link rel="stylesheet" href="../css/post.css">
+</head>
+
+<body onload="showMenu();checklogin()">
+    <div id="nav">
+        <div class="container">
+            <div class="topnav">
+                <ul class="left">
+                    <li><a href="https://www.facebook.com/carmodelstore"><img src="../images/icon/facebookicon.svg"></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/carmodelstore"><img src="../images/icon/instagramicon.svg"></a>
+                    </li>
+                    <li><a href="https://www.youtube.com"><img src="../images/icon/youtubeicon.svg"></a></li>
+                </ul>
+
+                <ul class="right">
+                    <li><button onclick="showform()"><img src="../images/icon/user-icon-svgrepo-com.svg">Sign In or
+                            Register</button></li>
+                </ul>
+            </div>
+            <div class="botnav">
+                <div class="logo"><a href="index.html"><img src="../images/icon/logo.png" alt="CMS"></a></div>
+                <div><button id="btnmenu" onclick="shoMenuMobile()"></button></div>
+                <div class="container">
+                    <div class="top">
+                            <div class="searchbox">
+                                <input type="text" placeholder="" id="search" onKeyUp="search()"><button><img src="../images/icon/searchicon.svg"></button>
+                            </div>
+                            <div class="searchextend">
+
+                            </div>
+                            <div class="serachresult">
+
+                            </div>
+                        
+                        <ul class="bot-right">
+                            <li><button onclick="location.href='file/cart.html'"><img src="../images/icon/carticon.svg"></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="bot">
+                        <ul id="navmenu">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="user" class="modal">
+        <div id="login">
+            <form id="loginform">
+                <button type="button" class="close" onClick="closeform()">+</button>
+                <h2>ĐĂNG NHẬP</h2>
+                <div class="logininfo">
+                    <div class="col">
+                        <label for="usernameLogin">Tên đăng nhập:</label>
+                        <input type="text" id="usernameLogin">
+                        <div id="usernameerror">Bạn chưa nhập tên đăng nhập</div>
+                        <label for="passwordLogin">Mật khẩu:</label>
+                        <input type="password" id="passwordLogin">
+                        <div id="passwordloginerror">Bạn chưa nhập mật khẩu</div>
+                    </div>
+                </div>
+                <button type="submit" id="btnlogin">Login</button>
+                <p>Bạn chưa có tài khoản? <a href="#" onClick="showSignUp()">Đăng ký</a></p>
+            </form>
+        </div>
+        <div id="signup">
+            <form id="signupform">
+                <button type="button" class="close" onClick="closeform()">+</button>
+                <h2>ĐĂNG KÝ</h2>
+                <div class="signupinfo">
+                    <div class="col">
+                        <label for="fullname">Họ và tên: </label>
+                        <input type="text" id="fullname">
+                        <div id="fullnameerror">Bạn chưa nhập họ tên</div>
+                        <label for="address">Địa chỉ: </label>
+                        <input type="text" id="address">
+                        <div id="addresserror">Bạn chưa địa chỉ</div>
+                        <label for="phone">Số điện thoại: </label>
+                        <input type="text" id="phone">
+                        <div id="phoneerror">Bạn chưa nhập số điện thoại</div>
+                    </div>
+                    <div class="col">
+                        <label for="usernameSignUp">Tên đăng nhập: </label>
+                        <input type="text" id="usernameSignUp">
+                        <div id="usererror">Bạn chưa nhập tên đăng nhập</div>
+                        <label for="passwordSignUp">Mật khẩu: </label>
+                        <input type="password" id="passwordSignUp">
+                        <div id="passworderror">Bạn chưa nhập mật khẩu</div>
+                        <label for="passwordSignUp2">Nhập lại mật khẩu: </label>
+                        <input type="password" id="passwordSignUp2">
+                        <div id="password2error">Mật khẩu không trùng khớp</div>
+                    </div>
+                </div>
+                <button type="submit" id="btnsignup">Đăng ký</button>
+                <p>Trở về trang <a href="#" onClick="showLogin()">Đăng nhập</a></p>
+            </form>
+        </div>
+    </div>
+    <div class="wrapper_post">
+        <div class="wrapper_post_top">
+            <div class="item">
+                <img src="../images/post/pos3/1.png" alt="" id="pic1">
+            </div>
+            <div class="item">
+                <h3>Tại sao bạn nên mua các mô hình xe đua F1?</h3>
+                <p>Mô hình xe đua Formula One (F1), đỉnh cao của môn thể thao đua xe, có một cộng đồng fan hâm mộ lớn và nhiệt huyết trên toàn thế giới. Thể thao này không chỉ xoay quanh các tay đua và thành tích của họ trên đường đua, mà còn về những chiếc xe biểu tượng đã tham gia cuộc đua suốt nhiều năm. Người hâm mộ F1 đã lâu đã sưu tầm các mô hình xe, và có nhiều lý do để làm điều đó. Trong bài viết này, chúng ta sẽ tìm hiểu vì sao bạn nên bắt đầu sưu tầm các mô hình xe đua F1.</p>
+                <strong>Tính sưu tầm</strong>
+                <p>Một trong những lý do chính để bắt đầu sưu tầm các mô hình xe đua F1 là tính sưu tầm của chúng. Giống như nhiều vật phẩm sưu tầm khác, các mô hình xe F1 được sản xuất với số lượng hạn chế, làm cho chúng trở nên hiếm và có giá trị. Việc sản xuất giới hạn đồng nghĩa với việc sau khi một mô hình cụ thể đã bán hết, khó có khả năng được sản xuất lại, và giá trị của nó sẽ tăng theo thời gian. Sự hiếm có này làm cho các mô hình xe F1 trở thành cơ hội đầu tư tuyệt vời, vì chúng có khả năng tăng giá trị theo thời gian.</p>
+                <strong>Mức độ chi tiết</strong>
+                <p>Một lý do khác để bắt đầu sưu tầm các mô hình xe F1 là mức độ chi tiết mà được đầu tư vào từng chiếc xe. Các mô hình xe F1 được chế tạo tỉ mỉ, với mọi khía cạnh của chiếc xe được sao chép tới hoàn hảo. Từ những đường cong khí động học của bộ phận ngoại thất đến những chi tiết phức tạp của động cơ và hệ thống treo, các mô hình xe F1 là một minh chứng cho sự tận tụy và kỹ năng của những người chế tạo mô hình.</p>
+                <strong>Sự độc nhất vô nhị</strong>
+                <p>Mỗi mô hình xe F1 đều là duy nhất, vì mỗi chiếc đại diện cho một chiếc xe cụ thể từ một cuộc đua cụ thể. Sự độc nhất này cải thiện tính sưu tầm của các mô hình xe và làm cho chúng trở nên đặc biệt hơn với các nhà sưu tập. Mỗi mô hình xe là một bản sao hoàn hảo của chiếc xe gốc, và nhiều mô hình thậm chí bao gồm cả tem của tay đua và đội đua, làm tăng tính xác thực của chúng.</p>
+                <p>Sưu tầm các mô hình xe F1 là một sở thích tuyệt vời cho các fan hâm mộ thể thao đua xe và những người sưu tầm. Với việc sản xuất giới hạn, mức độ chi tiết, tính độc nhất vô nhị và các hộp trưng bày đẹp mắt, các mô hình xe F1 là một vật phẩm sưu tầm có giá trị và được săn đón.</p>
+                <p>Vì vậy, nếu bạn là fan của F1, hoặc chỉ đơn giản là đánh giá cao sự khéo léo trong việc tạo ra các mô hình xe, tại sao không bắt đầu bộ sưu tập riêng của bạn ngay hôm nay? Có nhiều nhà sản xuất sản xuất các mô hình F1 ở các tỷ lệ khác nhau bao gồm Spark Models, Solido, Minichamps và Bburago.</p>
+                <strong>Mô hình F1 từ Spark Models</strong>
+                <p>Nếu bạn là fan của môn thể thao đua xe và yêu thích việc sưu tầm mô hình xe, thì bạn nên cân nhắc mua các mô hình xe F1 của Spark Models. Spark Models là một nhà sản xuất nổi tiếng về mô hình xe chất lượng cao, và bộ sưu tập xe F1 của họ cũng không ngoại lệ. Các mô hình này được làm từ nhựa chất lượng cao, đảm bảo độ bền và chi tiết tuyệt vời. Các mô hình xe F1 của Spark Models có sẵn ở tỷ lệ 1/18 và 1/43, cho phép bạn lựa chọn kích thước phù hợp với nhu cầu của mình. Những mô hình này là một bổ sung tuyệt vời cho bất kỳ bộ sưu tập nào và hoàn hảo để trưng bày trong nhà hoặc văn phòng của bạn. Với sự chăm sóc đến từng chi tiết và sự khéo léo xuất sắc, các mô hình xe F1 của Spark Models là một sản phẩm không thể thiếu đối với bất kỳ người đam mê môn thể thao đua xe nào.</p>
+                <img src="../images/post/pos3/2.jpg" alt="">
+            </div>
+            <div class="item">
+                <strong>Các mô hình xe F1 từ Solido</strong>
+                <p>Solido sản xuất một loạt mô hình xe đua F1 tuyệt vời mà bất kỳ người sưu tầm nào cũng nên xem. Các mô hình có sẵn ở tỷ lệ phổ biến 1/18 và được chế tạo một cách tinh xảo từ kim loại đúc chất lượng cao. Điểm nổi bật của các mô hình F1 của Solido là sự chú trọng đặc biệt đến chi tiết, với mỗi chiếc xe được thiết kế tỉ mỉ để trông giống hệt như phiên bản thực tế. Ngoài ra, bộ sưu tập bao gồm một lựa chọn ấn tượng về các đội đua F1, bao gồm McLaren, Alfa Romeo và Alpine, phục vụ cho những người đam mê đua xe hiện đại. Những mô hình F1 này hoàn hảo để trưng bày trong nhà hoặc văn phòng và là một sản phẩm không thể thiếu đối với bất kỳ người sưu tầm nghiêm túc nào. Nếu bạn đang tìm kiếm những mô hình xe đua F1 chất lượng cao, chi tiết tinh xảo, bạn không thể sai khi lựa chọn bộ sưu tập của Solido.</p>
+                <img src="../images/post/pos3/3.jpg" alt="">
+            </div>
+        </div>
+        <div class="wrapper_post_bot">
+            <h1 class="wrapper_post_bot_title">Các Bài Viết Gần đây</h1>
+            <div class="wrapper_post_bot_content">
+                <div class="wrapper_post_bot_content_item">
+                    <a href="../post/index1.html">
+                        <img src="../images/post/pos1/1.png" alt="">
+                    </a>
+                    <strong class="wrapper_post_bot_content_item_sub">Những chuyến đi không thể quên: Top 10 siêu xe của thập kỷ 2020</strong>
+                    <div class="wrapper_post_bot_content_item_sub1">Những năm đầu thập kỷ 2020 đánh dấu một giai đoạn đầy sức sống trong thế giới ô tô, nơi các nhà sản xuất kết hợp sức mạnh vượt ...</div>
+                    <div class="wrapper_post_bot_content_item_sub2">
+                        <div class="wrapper_post_bot_content_item_sub2_left"><a href="../post/index1.html">Đọc thêm</a></div>
+                        <div class="wrapper_post_bot_content_item_sub2_right">Tác giả: Adam</div>
+                    </div>
+                </div>
+                <div class="wrapper_post_bot_content_item">
+                    <a href="../post/index2.html">
+                        <img src="../images/post/pos2/1.webp" alt="">
+                    </a>
+                    <strong class="wrapper_post_bot_content_item_sub">Thông báo Solido - Tháng 6 năm 2022</strong>
+                    <div class="wrapper_post_bot_content_item_sub1">Solido đã thông báo về một dàn mẫu xe đa dạng màu sắc trong tỷ lệ 1/18, bao gồm các mẫu xe thể thao nổi bật như Alpine A310 và...</div>
+                    <div class="wrapper_post_bot_content_item_sub2">
+                        <div class="wrapper_post_bot_content_item_sub2_left"><a href="../post/index2.html">Đọc thêm</a></div>
+                        <div class="wrapper_post_bot_content_item_sub2_right">Tác giả: Adam</div>
+                    </div>
+                </div>
+                <div class="wrapper_post_bot_content_item">
+                    <a href="../post/index3.html">
+                        <img src="../images/post/pos3/1.png" alt="">
+                    </a>
+                    <strong class="wrapper_post_bot_content_item_sub">Sao bạn nên mua các mô hình xe đua F1?</strong>
+                    <div class="wrapper_post_bot_content_item_sub1">Mô hình xe đua Formula One (F1), đỉnh cao của môn thể thao đua xe, có một cộng đồng fan hâm mộ lớn và nhiệt huyết trên toàn thế...</div>
+                    <div class="wrapper_post_bot_content_item_sub2">
+                        <div class="wrapper_post_bot_content_item_sub2_left"><a href="../post/index3.html">Đọc thêm</a></div>
+                        <div class="wrapper_post_bot_content_item_sub2_right">Tác giả: Adam</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-footer"  style="height: 800px;">
+        <footer id="footer">
+            <div class="footer__top">
+                <div class="footer__top__left">
+                    <h3>THEO DÕI ĐỂ NHẬN THÔNG TIN MỚI</h3>
+                </div>
+                <div class="footer__top__right">
+                    <form id="footer__top__right__searchBox">
+                        <input id="footer__top__right__searchBox__searchText" type="email" placeholder="bhhh@gmail.com">
+                        <button id="footer__top__right__searchBox__searchButton" type="submit"><i class="fa-regular fa-bell" style="color: white;"></i>
+                            ĐĂNG KÝ</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer__mid">
+                <div class="footer__mid__left" >
+                    <span class="footer__mid__left__logo">
+                        <!-- <img src="https://cdn11.bigcommerce.com/s-hmjw8fgkuv/images/stencil/180x70/cms_logo_new_1660047597__87732.original.png"
+                            alt="logoCMS"> -->
+                        <img src="../images/icon/logo.png" alt="CMS">
+                    </span>
+                    <ul class="footer__mid__left__info">
+                        <li class="footer__mid__left__info__sec1">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="footer__mid__left__info__sec1__item">
+                                🏠 Nhà sản xuất mô hình
+                                <br>xe ô tô và xe máy.
+                                <br>1827 An Dương Vương, Q5, TP.HCM
+                                <br>
+                                <br>
+                                Số thuế VAT: SG123456789
+                                <br>
+                                <br>
+                                Giao hàng toàn quốc!!
+                            </div>
+                        </li>
+                        <li class="footer__mid__left__info_sec2">
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="" class="footer__mid__left__info__sec2__item">Gọi chúng tôi tại 0123 456 789 </a>
+                        </li>
+                    </ul>
+                    <ul class="footer__mid__left__socialLink">
+                        <li></li>
+                        <a href=""><i class="fa-brands fa-square-instagram fa-2xl"></i></a>
+                        <a href=""><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="footer__mid__right">
+                    <div class="footer__mid__right__col">
+                        <h3>VỀ CMS</h3>
+                        <ul class="footer__mid__right__col__aboutUs">
+                            <li>
+                                <button id="footer__mid__right__col__aboutUs__story">Câu chuyện CMS</button>
+                                <div class="footer__mid__right__col__aboutUs__wrapper-content" style="display: none;">
+                                    <div class="footer__mid__right__col__aboutUs__wrapper-content__top-content">
+                                        <div class="footer__mid__right__col__aboutUs__wrapper-content__top-content__top-content-left"></div>
+                                        <div class="footer__mid__right__col__aboutUs__wrapper-content__top-content__top-content-right">
+                                            <i class="fa-solid fa-xmark" style="color: #000000;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="footer__mid__right__col__aboutUs__wrapper-content__content">
+                                        <h3>VỀ CHÚNG TÔI</h3>
+                                        <p>Chúng tôi là cửa hàng mô hình ô tô! Chúng tôi bắt đầu vào năm 2021 tại
+                                            Birmingham, Vương quốc Anh, với niềm đam mê ô tô. Chúng tôi ở đây để cung
+                                            cấp dịch vụ xuất sắc và nhiều mẫu mã, ô tô điều khiển từ xa và ô tô có khe
+                                            cắm. Lựa chọn của chúng tôi bao gồm từ những chiếc xe mô hình đua xe và F1
+                                            cho đến những chiếc xe đánh bạc Batman tưởng tượng. Nếu bạn đang theo đuổi
+                                            một sản phẩm cụ thể, đừng ngần ngại gọi
+                                            điện hoặc gửi email cho chúng tôi và chúng tôi luôn sẵn sàng trợ giúp 7 ngày
+                                            một tuần. Chúng tôi chuyên đặt hàng qua thư, tuy nhiên chúng tôi rất vui
+                                            được mời bạn đến văn phòng của chúng tôi, nhưng vui lòng cho chúng tôi biết
+                                            khi nào bạn muốn ghé thăm.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="">Cửa hàng</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__mid__right__col">
+                        <h3>PHÂN LOẠI</h3>
+                        <ul class="footer__mid__right__col__categories">
+                            <li><a href="">Gợi ý</a></li>
+                            <li><a href="">Theo giá</a></li>
+                            <li><a href="">Ưu đãi</a></li>
+                            <li><a href="">Thương hiệu</a></li>
+                            <li><a href="">Kích thước</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__mid__right__col">
+                        <h3>HÃNG PHỔ BIẾN</h3>
+                        <ul class="footer__mid__right__col__brands">
+                            <li>Toyota</li>
+                            <li>Lamborghini</li>
+                            <li>McLaren</li>
+                            <li>Ferrari</li>
+                            <li>Porsche</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bot">
+                <div class="footer__bot__left">
+                    <h5>&copy; 2023 Car Model Store.</h5>
+                </div>
+                <div class="footer__bot__right">
+                    <div class="img"><img src="../images/footer-img/shoopee.webp" alt="pic1" height="30px" width="35px"></div>
+                    <div class="img"><img src="../images/footer-img/visa.svg" alt="pic2" height="30px" width="35px"></div>
+                    <div class="img"><img src="../images/footer-img/apple-pay.svg" alt="pic3" height="30px" width="35px"></div>
+                    <div class=" img"><img src="../images/footer-img/MoMo_Logo.png" alt="pic4" height="30px" width="35px"></div>
+                    <div class=" img"><img src="../images/footer-img/zalo.png" alt="pic5" height="30px" width="35px"></div>
+                    <div class="img"><img src="../images/footer-img/mastercard_payment_method_icon_142750.png" alt="pic6" height="30px"width="35px"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="../js/main-footer.js"></script>
+    <script src="../js/javascript.js"></script>
+</body>
+
+</html>
