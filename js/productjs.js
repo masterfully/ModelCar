@@ -2,6 +2,8 @@
 let product = { productID: "", productName: "", productIMG: "", price: "", type: "" };
 
 var productArray = [
+
+    // ferrari--------------------------------
     { productID: "P0001", productName: "Bburago F1 Ferrari F1-75 #16 (Charles Leclerc) 2022 Formula 1 Model Car 1/43", productIMG: "ferrari/P0001.png", brand: "Ferrari", price: "11.99", type: "featured" },
     { productID: "P0002", productName: "Bburago Ferrari Race & Play F8 Tributo 1/43 B18-36054", productIMG: "ferrari/P0002.png", brand: "Ferrari", price: "6.50", type: "featured" },
     { productID: "P0003", productName: "Bburago Scuderia F1 Ferrari 2022 - SF21 #16 (Charles Leclerc) 2022 Model Car 1/43", productIMG: "ferrari/P0003.png", brand: "Ferrari", price: "11.99", type: "featured" },
@@ -14,9 +16,22 @@ var productArray = [
     { productID: "P0010", productName: "Bburago Ferrari Race & Play 488 GTB 1/24 Model Car", productIMG: "ferrari/P0010.png", brand: "Ferrari", price: "22.00", type: "featured" },
     { productID: "P0011", productName: "Bburago Ferrari Race & Play Laferrari 1/24", productIMG: "ferrari/P0011.png", brand: "Ferrari", price: "20.00", type: "featured" },
     { productID: "P0012", productName: "Bburago Ferrari Race And Play 488 Pista 1/24 Model Car ", productIMG: "ferrari/P0012.png", brand: "Ferrari", price: "22.00", type: "featured" },
+    { productID: "P0001", productName: "Bburago F1 Ferrari F1-75 #16 (Charles Leclerc) 2022 Formula 1 Model Car 1/43", productIMG: "ferrari/P0001.png", brand: "Ferrari", price: "11.99", type: "featured" },
+    { productID: "P0002", productName: "Bburago Ferrari Race & Play F8 Tributo 1/43 B18-36054", productIMG: "ferrari/P0002.png", brand: "Ferrari", price: "6.50", type: "featured" },
+    { productID: "P0003", productName: "Bburago Scuderia F1 Ferrari 2022 - SF21 #16 (Charles Leclerc) 2022 Model Car 1/43", productIMG: "ferrari/P0003.png", brand: "Ferrari", price: "11.99", type: "featured" },
+    { productID: "P0004", productName: "Maisto Ferrari Enzo Kit 1/24", productIMG: "ferrari/P0004.png", brand: "Ferrari", price: "22.00", type: "featured" },
+    { productID: "P0004", productName: "Maisto Ferrari Enzo Kit 1/24", productIMG: "ferrari/P0004.png", brand: "Ferrari", price: "22.00", type: "featured" },
+    { productID: "P0005", productName: "Bburago Ferrari Race And Play Monza Sp-1 1/43 Toy Car", productIMG: "ferrari/P0005.png", brand: "Ferrari", price: "7.95", type: "featured" },
+    { productID: "P0006", productName: "Maisto Premium RC F1 Ferrari SF90 2019 Season Leclerc 1/24", productIMG: "ferrari/P0006.png", brand: "Ferrari", price: "35.00", type: "featured" },
+    { productID: "P0007", productName: "Bburago Ferrari Racing 488 Challenge (Formula Ferrari Racing 2017) 1/24 Model Car", productIMG: "ferrari/P0007.png", brand: "Ferrari", price: "25.00", type: "featured" },
+    { productID: "P0008", productName: "Bburago Ferrari Race & Play F12 Tdf 1/24", productIMG: "ferrari/P0008.png", brand: "Ferrari", price: "20.00", type: "featured" },
+    { productID: "P0005", productName: "Bburago Ferrari Race And Play Monza Sp-1 1/43 Toy Car", productIMG: "ferrari/P0005.png", brand: "Ferrari", price: "7.95", type: "featured" },
+    { productID: "P0006", productName: "Maisto Premium RC F1 Ferrari SF90 2019 Season Leclerc 1/24", productIMG: "ferrari/P0006.png", brand: "Ferrari", price: "35.00", type: "featured" },
+    { productID: "P0007", productName: "Bburago Ferrari Racing 488 Challenge (Formula Ferrari Racing 2017) 1/24 Model Car", productIMG: "ferrari/P0007.png", brand: "Ferrari", price: "25.00", type: "featured" },
+    { productID: "P0008", productName: "Bburago Ferrari Race & Play F12 Tdf 1/24", productIMG: "ferrari/P0008.png", brand: "Ferrari", price: "20.00", type: "featured" },
 
 
-    // TOYOTAAAAAAAA
+    // TOYOTA----------------------------------------------------------------
     { productID: "P0013", productName: "Solido 1993 Toyota Supra Mk.4 (A80) - Renaissance Red Car Model 1/18", productIMG: "toyota/P0013.png", brand: "Toyota", price: "49.00", type: "new" },
     { productID: "P0014", productName: "CULT Toyota Landcruiser FJ40 Yellow 1977 1/18", productIMG: "toyota/P0014.png", brand: "Toyota", price: "128.29", type: "new" },
     { productID: "P0015", productName: "Solido 2023 Toyota GR Supra Streetfighter - Prominance Red Car Model 1/8", productIMG: "toyota/P0015.png", brand: "Toyota", price: "60.00", type: "new" },
@@ -29,6 +44,13 @@ var productArray = [
     { productID: "P0022", productName: "Maisto RWB Toyota Sprinter Trueno AE86 White/Black 1/24", productIMG: "toyota/P0022.png", brand: "Toyota", price: "330.00", type: "new" },
     { productID: "P0023", productName: "IXO Toyota Celica Turbo 4WD (ST185) #1 Safari Rally 1993", productIMG: "toyota/P0023.png", brand: "Toyota", price: "29.00", type: "new" },
     { productID: "P0024", productName: "IXO Toyota Yaris WRC #69 Rally Ypres 2021 K.Rovanpera/J.Halttunen 1/43", productIMG: "toyota/P0024.png", brand: "Toyota", price: "39.00", type: "new" },
+    { productID: "P0013", productName: "Solido 1993 Toyota Supra Mk.4 (A80) - Renaissance Red Car Model 1/18", productIMG: "toyota/P0013.png", brand: "Toyota", price: "49.00", type: "new" },
+    { productID: "P0014", productName: "CULT Toyota Landcruiser FJ40 Yellow 1977 1/18", productIMG: "toyota/P0014.png", brand: "Toyota", price: "128.29", type: "new" },
+    { productID: "P0015", productName: "Solido 2023 Toyota GR Supra Streetfighter - Prominance Red Car Model 1/8", productIMG: "toyota/P0015.png", brand: "Toyota", price: "60.00", type: "new" },
+    { productID: "P0016", productName: "Maisto Toyota Supra GR Red 1/24 Scale Model Car", productIMG: "toyota/P0016.png", brand: "Toyota", price: "20.00", type: "new" },
+    { productID: "P0017", productName: "Ixo Toyota Yaris Pandem White 1/43 Diecast Scale Model Car", productIMG: "toyota/P0017.png", brand: "Toyota", price: "39.00", type: "new" },
+    { productID: "P0018", productName: "Maisto Toyota Tacoma Pick-Up 2.4GHZ 1/16", productIMG: "toyota/P0018.png", brand: "Toyota", price: "33.00", type: "new" },
+    { productID: "P0019", productName: "AutoArt Toyota Century Open Black DieCast Car Model 1/18", productIMG: "toyota/P0019.png", brand: "Toyota", price: "300.00", type: "new" },
 
 
     //LAMBORGHINI----------------------------------------------------------------
@@ -64,6 +86,10 @@ var productArray = [
     { productID: "P0062", productName: "AutoArt 2019 McLaren 600LT (myan orange) Model Car (composite) 1/18", productIMG: "mclaren/P0062.png", brand: "McLaren", price: "222.00", type: "" },
     { productID: "P0063", productName: "AutoArt Mclaren P1 (fire black w/red/black interior) 1/18", productIMG: "mclaren/P0063.png", brand: "McLaren", price: "172.00", type: "" },
     { productID: "P0064", productName: "AutoArt 2019 McLaren 600LT (fistral blue) 1/18 Model Car", productIMG: "mclaren/P0064.png", brand: "McLaren", price: "172.00", type: "" },
+    { productID: "P0044", productName: "AutoArt McLaren P1 GTR (Dark Grey Metallic/Orange Accents) 1/18", productIMG: "mclaren/P0044.png", brand: "McLaren", price: "252.00", type: "" },
+    { productID: "P0045", productName: "Minichamps McLaren F1 Team MCL35M - Lando Norris Bahrain GP 2022 1/43", productIMG: "mclaren/P0045.png", brand: "McLaren", price: "72.00", type: "" },
+    { productID: "P0046", productName: "Solido McLaren 765 LT Orange 2020 Car Model 1/43", productIMG: "mclaren/P0046.png", brand: "McLaren", price: "52.00", type: "" },
+    { productID: "P0047", productName: "Spark Models Mercedes McLaren - F1 MCL35L M12 EQ Power+ P3 Abu Dhabi GP 2021 Daniel Ricciardo 1/43", productIMG: "mclaren/P0047.png", brand: "McLaren", price: "22.00", type: "" },
 
     // porsche--------------------------------
     { productID: "P0049", productName: "Maisto Porsche 911 GT2 RS Special Edition 1/24", productIMG: "porsche/P0049.png", brand: "Porsche", price: "72.00", type: "bestselling" },
@@ -90,11 +116,11 @@ specialButton.forEach(btn => {
     });
 });
 
-function quantity_inc(){
+function quantity_inc() {
     document.getElementById('quantity_number').value++;
 }
-function quantity_dec(){
-    if(document.getElementById('quantity_number').value>1)
+function quantity_dec() {
+    if (document.getElementById('quantity_number').value > 1)
         document.getElementById('quantity_number').value--;
 }
 
@@ -144,12 +170,15 @@ function showProductInfo(productID) {
     document.querySelector(".productInfor-container").innerHTML = str2;
     document.getElementById("productInfor-container").style.display = "block";
 }
+// done show product information--------------------------------
 
 function showSpecialProducts(productType) {
     var str = "";
+    var count = 0;
     for (let i = 0; i < productArray.length; i++) {
-        if (productArray[i].type == productType) {
-            str += `<li class= "product" id="${productArray[i].productID}" onclick="showProductInfo('${productArray[i].productID}')">
+        if (count < 12) {
+            if (productArray[i].type == productType) {
+                str += `<li class= "product" id="${productArray[i].productID}" onclick="showProductInfo('${productArray[i].productID}')">
                             <div class="product-img-container">
                                 <img src="./images/product/${productArray[i].productIMG}" alt="" class="product-img">
                                 <div class="product-botton" >
@@ -159,20 +188,26 @@ function showSpecialProducts(productType) {
                             </div>
                         </a>
                         <div class="product-infor">
-                            <h4 class="product-title"><a href="">
+                            <h4 class="product-title"><a>
                                 ${productArray[i].productName}
                                 </a>
                             </h4>
                             <p class="product-brand">${productArray[i].brand}</p>
                             <p class="product-price">£${productArray[i].price}</p>
                         </div>
-                </li >`;
+                </li>`;
+                count++;
+            }
+            document.querySelector(".specialProducts-list").innerHTML = str;
         }
-        document.querySelector(".specialProducts-list").innerHTML = str + `<div id="page">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-    </div>;`
+        else if (count >= 12 && count < 24) {
+            document.querySelector(".specialProducts-list").innerHTML = str + `<div id="page">
+                <button>1</button>
+                <button onclick="showSecondPage('${productType}')">2</button>
+                <button style="display:none;">3</button>
+            </div>`
+        }
+
     }
     const specialButton = document.querySelectorAll('#onload');
     specialButton.forEach(btn => {
@@ -181,10 +216,98 @@ function showSpecialProducts(productType) {
     });
 }
 
+function showSecondPage(productType) {
+    var str = "";
+    var count = 12;
+    for (let i = count; i < productArray.length; i++) {
+        if (count >= 12 && count < 24) {
+            if (productArray[i].type == productType) {
+                str += `<li class= "product" id="${productArray[i].productID}" onclick="showProductInfo('${productArray[i].productID}')">
+                            <div class="product-img-container">
+                                <img src="./images/product/${productArray[i].productIMG}" alt="" class="product-img">
+                                <div class="product-botton" >
+                                    <div class="icon"><ion-icon name="cart"></ion-icon></div>
+                                    <div class="view-botton">view</div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-infor">
+                            <h4 class="product-title"><a>
+                                ${productArray[i].productName}
+                                </a>
+                            </h4>
+                            <p class="product-brand">${productArray[i].brand}</p>
+                            <p class="product-price">£${productArray[i].price}</p>
+                        </div>
+                </li>`;
+                count++;
+            }
+            document.querySelector(".specialProducts-list").innerHTML = str;
+        }
+        else if (count >= 24) {
+            document.querySelector(".specialProducts-list").innerHTML = str + `<div id="page">
+                <button onclick="showSpecialProducts('${productType}')">1</button>
+                <button>2</button>
+                <!--  <button>3</button> -->
+            </div>`
+        }
+    }
+}
 
 
 
 
+
+// function showBrandProducts(Pbrand) {
+//     document.getElementById("closeNav").style.display = "none";
+//     document.getElementById("specialProducts").style.borderBottom = "0px";
+//     document.getElementById("banner").style.display = "none";
+//     Pbrand = Pbrand.toLowerCase();
+//     var str = "";
+//     for (let i = 0; i < productArray.length; i++) {
+//         if (productArray[i].brand.toLowerCase() == Pbrand) {
+//             str += `<li class= "product" id="${productArray[i].productID}" onclick="showProductInfo('${productArray[i].productID}')">
+//                             <div class="product-img-container">
+//                                 <img src="./images/product/${productArray[i].productIMG}" alt="" class="product-img">
+//                                 <div class="product-botton" >
+//                                     <div class="icon"><ion-icon name="cart"></ion-icon></div>
+//                                     <div class="view-botton">view</div>
+//                                 </div>
+//                             </div>
+//                         </a>
+//                         <div class="product-infor">
+//                             <h4 class="product-title"><a href="">
+//                                 ${productArray[i].productName}
+//                                 </a>
+//                             </h4>
+//                             <p class="product-brand">${productArray[i].brand}</p>
+//                             <p class="product-price">£${productArray[i].price}</p>
+//                         </div>
+//                 </li >`;
+//         }
+//         document.querySelector(".specialProducts-list").innerHTML = str + `<div id="page">
+//         <button>1</button>
+//         <button>2</button>
+//         <button>3</button>
+//     </div>;`;
+//     }
+// }
+const navButton = document.querySelectorAll('#navmenu li a');
+navButton.forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelector('.navBtn-click')?.classList.remove('navBtn-click');
+        btn.classList.add('navBtn-click');
+    });
+});
+
+
+
+// paging ----------------------------------------------------------------
+
+let perPage = 12;
+let currentPage = 1;
+let start = 0;
+let end = perPage;
 
 function showBrandProducts(Pbrand) {
     document.getElementById("closeNav").style.display = "none";
@@ -192,9 +315,11 @@ function showBrandProducts(Pbrand) {
     document.getElementById("banner").style.display = "none";
     Pbrand = Pbrand.toLowerCase();
     var str = "";
+    var count = 0;
     for (let i = 0; i < productArray.length; i++) {
-        if (productArray[i].brand.toLowerCase() == Pbrand) {
-            str += `<li class= "product" id="${productArray[i].productID}" onclick="showProductInfo('${productArray[i].productID}')">
+        if (count < 16) {
+            if (productArray[i].brand.toLowerCase() == Pbrand) {
+                str += `<li class= "product" id="${productArray[i].productID}" onclick="showProductInfo('${productArray[i].productID}')">
                             <div class="product-img-container">
                                 <img src="./images/product/${productArray[i].productIMG}" alt="" class="product-img">
                                 <div class="product-botton" >
@@ -212,18 +337,16 @@ function showBrandProducts(Pbrand) {
                             <p class="product-price">£${productArray[i].price}</p>
                         </div>
                 </li >`;
+                count++;
+            }
+            document.querySelector(".specialProducts-list").innerHTML = str;
         }
-        document.querySelector(".specialProducts-list").innerHTML = str + `<div id="page">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-    </div>;`;
+        else {
+            document.querySelector(".specialProducts-list").innerHTML = str + `<div id="page">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                </div>`;
+        }
     }
 }
-const navButton = document.querySelectorAll('#navmenu li a');
-navButton.forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.querySelector('.navBtn-click')?.classList.remove('navBtn-click');
-        btn.classList.add('navBtn-click');
-    });
-});
