@@ -22,7 +22,7 @@
 </head>
 <!--  -->
 
-<body onload="showSpecialProducts('featured',1);checklogin()">
+<body onload="showSpecialProducts('featured',0);checklogin()">
     <header>
         <!-- MOBILE MENU -->
         <div class="mobile-menu bg-second">
@@ -130,11 +130,11 @@
                 <div class="bottom-header container">
                     <ul id="navmenu">
                         <li class="navBtn"><a href="index.html">TRANG CHỦ</a></li>
-                        <li class="navBtn" onclick="showBrandProducts('TOYOTA',1)"><a>TOYOTA</a></li>
-                        <li class="navBtn" onclick="showBrandProducts('LAMBORGHINI',1)"><a>LAMBORGHINI</a></li>
-                        <li class="navBtn" onclick="showBrandProducts('MCLAREN',1)"><a>MCLAREN</a></li>
-                        <li class="navBtn" onclick="showBrandProducts('PORSCHE',1)"><a>PORSCHE</a></li>
-                        <li class="navBtn" onclick="showBrandProducts('FERRARI',1)"><a>FERRARI</a></li>
+                        <li class="navBtn" onclick="showBrandProducts('TOYOTA',0)"><a>TOYOTA</a></li>
+                        <li class="navBtn" onclick="showBrandProducts('LAMBORGHINI',0)"><a>LAMBORGHINI</a></li>
+                        <li class="navBtn" onclick="showBrandProducts('MCLAREN',0)"><a>MCLAREN</a></li>
+                        <li class="navBtn" onclick="showBrandProducts('PORSCHE',0)"><a>PORSCHE</a></li>
+                        <li class="navBtn" onclick="showBrandProducts('FERRARI',0)"><a>FERRARI</a></li>
                     </ul>
                 </div> <!--có navmenu của phần js để đẩy mấy sản phẩm -->
             </div>
@@ -211,13 +211,13 @@
     <div class="specialProducts" id="specialProducts">
         <ul class="specialProducts-tabs" id="closeNav">
             <li class="tab" id="featured">
-                <a class="tab-title" id="onload" onclick="showSpecialProducts('featured',1)">featured</a>
+                <a class="tab-title" id="onload" onclick="showSpecialProducts('featured',0)">featured</a>
             </li>
             <li class="tab" id="bestselling">
-                <a class="tab-title" onclick="showSpecialProducts('bestselling',1)">bestselling</a>
+                <a class="tab-title" onclick="showSpecialProducts('bestselling',0)">bestselling</a>
             </li>
             <li class="tab">
-                <a class="tab-title" onclick="showSpecialProducts('new',1)">new</a>
+                <a class="tab-title" onclick="showSpecialProducts('new',0)">new</a>
             </li>
         </ul>
         <div class="productList-container">
