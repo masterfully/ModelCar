@@ -29,6 +29,11 @@ var productArray = [
     { productID: "P0006", productName: "Maisto Premium RC F1 Ferrari SF90 2019 Season Leclerc 1/24", productIMG: "ferrari/P0006.png", brand: "Ferrari", price: "35.00", type: "featured" },
     { productID: "P0007", productName: "Bburago Ferrari Racing 488 Challenge (Formula Ferrari Racing 2017) 1/24 Model Car", productIMG: "ferrari/P0007.png", brand: "Ferrari", price: "25.00", type: "featured" },
     { productID: "P0008", productName: "Bburago Ferrari Race & Play F12 Tdf 1/24", productIMG: "ferrari/P0008.png", brand: "Ferrari", price: "20.00", type: "featured" },
+    { productID: "P0004", productName: "Maisto Ferrari Enzo Kit 1/24", productIMG: "ferrari/P0004.png", brand: "Ferrari", price: "22.00", type: "featured" },
+    { productID: "P0005", productName: "Bburago Ferrari Race And Play Monza Sp-1 1/43 Toy Car", productIMG: "ferrari/P0005.png", brand: "Ferrari", price: "7.95", type: "featured" },
+    { productID: "P0006", productName: "Maisto Premium RC F1 Ferrari SF90 2019 Season Leclerc 1/24", productIMG: "ferrari/P0006.png", brand: "Ferrari", price: "35.00", type: "featured" },
+    { productID: "P0007", productName: "Bburago Ferrari Racing 488 Challenge (Formula Ferrari Racing 2017) 1/24 Model Car", productIMG: "ferrari/P0007.png", brand: "Ferrari", price: "25.00", type: "featured" },
+    { productID: "P0008", productName: "Bburago Ferrari Race & Play F12 Tdf 1/24", productIMG: "ferrari/P0008.png", brand: "Ferrari", price: "20.00", type: "featured" },
 
 
     // TOYOTA----------------------------------------------------------------
@@ -105,16 +110,9 @@ var productArray = [
     { productID: "P0059", productName: "Solido Porsche 992 GT3 - Python Green 2021 1/43", productIMG: "porsche/P0059.png", brand: "Porsche", price: "29.00", type: "bestselling" },
     { productID: "P0060", productName: "IXO Porsche 919 Hybrid #1 24h Le Mans 2017 Jani/Tandy/Lotterer 1/18", productIMG: "porsche/P0060.png", brand: "Porsche", price: "72.00", type: "bestselling" },
 ];
-localStorage.setItem('product', JSON.stringify(productArray));
 
 
-const specialButton = document.querySelectorAll('.specialProducts .specialProducts-tabs li a');
-specialButton.forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.querySelector('.clicked')?.classList.remove('clicked');
-        btn.classList.add('clicked');
-    });
-});
+
 
 function quantity_inc() {
     document.getElementById('quantity_number').value++;
@@ -124,17 +122,7 @@ function quantity_dec() {
         document.getElementById('quantity_number').value--;
 }
 
-
-
-
-
-
-
-
-
-
 function getIndex(productID) {
-    productID = String(productID);
     for (let i = 0; i < productArray.length; i++) {
         if (productArray[i].productID == productID) {
             return i;
@@ -172,126 +160,113 @@ function showProductInfo(productID) {
 }
 // done show product information--------------------------------
 
-function showSpecialProducts(productType) {
-    var str = "";
+
+
+
+
+function countProductsByBrand(productBrand) {
     var count = 0;
     for (let i = 0; i < productArray.length; i++) {
-        if (count < 12) {
-            if (productArray[i].type == productType) {
-                str += `<li class= "product" id="${productArray[i].productID}" onclick="showProductInfo('${productArray[i].productID}')">
-                            <div class="product-img-container">
-                                <img src="images/product/${productArray[i].productIMG}" alt="" class="product-img">
-                                <div class="product-botton" >
-                                    <div class="icon"><ion-icon name="cart"></ion-icon></div>
-                                    <div class="view-botton">view</div>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="product-infor">
-                            <h4 class="product-title"><a>
-                                ${productArray[i].productName}
-                                </a>
-                            </h4>
-                            <p class="product-brand">${productArray[i].brand}</p>
-                            <p class="product-price">£${productArray[i].price}</p>
-                        </div>
-                </li>`;
-                count++;
-            }
-            document.querySelector(".specialProducts-list").innerHTML = str;
+        if (productArray[i].type == productBrand) {
+            count++;
         }
-        else if (count >= 12 && count < 24) {
-            document.querySelector(".specialProducts-list").innerHTML = str + `<div id="page">
-                <button>1</button>
-                <button onclick="showSecondPage('${productType}')">2</button>
-                <button style="display:none;">3</button>
-            </div>`
+    }
+    return count;
+}
+
+function countSpecialProduct(productType) {
+    var count = 0;
+    for (let i = 0; i < productArray.length; i++) {
+        if (productArray[i].type == productType) {
+            count++;
+        }
+    }
+    return count;
+}
+
+
+localStorage.setItem('product', JSON.stringify(productArray));
+let retrievedProductArray = JSON.parse(localStorage.getItem('product')) || [];
+
+
+// push special products into local storage----------------------------------------------------------------
+function pushspecialProduct() {
+    let featured = [];
+    let bestselling = [];
+    let newProduct = [];
+    let toyota = [];
+    let lamborghini = [];
+    let mclaren = [];
+    let porsche = [];
+    let ferrari = [];
+    for (let i = 0; i < productArray.length; i++) {
+        if (productArray[i].brand == 'Toyota') {
+            toyota.push(productArray[i]);
+        }
+        else if (productArray[i].brand == 'Lamborghini') {
+            lamborghini.push(productArray[i]);
+        }
+        else if (productArray[i].brand == 'McLaren') {
+            mclaren.push(productArray[i]);
+        }
+        else if (productArray[i].brand == 'Porsche'){
+            porsche.push(productArray[i]);
+        }
+        else if (productArray[i].brand == 'Ferrari'){
+            ferrari.push(productArray[i]);
         }
 
     }
-    const specialButton = document.querySelectorAll('#onload');
-    specialButton.forEach(btn => {
+    for (let i = 0; i < productArray.length; i++) {
+        if (productArray[i].type == 'featured') {
+            featured.push(productArray[i]);
+        }
+        else if (productArray[i].type == 'bestselling') {
+            bestselling.push(productArray[i]);
+        }
+        else if (productArray[i].type == 'new') {
+            newProduct.push(productArray[i]);
+        }
+    }
+    localStorage.setItem('toyota', JSON.stringify(toyota));
+    localStorage.setItem('lamborghini', JSON.stringify(lamborghini));
+    localStorage.setItem('mclaren', JSON.stringify(mclaren));
+    localStorage.setItem('porsche', JSON.stringify(porsche));
+    localStorage.setItem('ferrari', JSON.stringify(ferrari));
+    localStorage.setItem('featuredProduct', JSON.stringify(featured));
+    localStorage.setItem('bestsellingProduct', JSON.stringify(bestselling));
+    localStorage.setItem('newProduct', JSON.stringify(newProduct));
+}
+pushspecialProduct();
+
+//end push special product----------------------------------------------------------------
+
+let specialProductsPerPage = 12;
+let brandProductPerPage = 16;
+
+const featuredButton = document.querySelectorAll('#onload');
+featuredButton.forEach(btn => {
+    document.querySelector('.clicked')?.classList.remove('clicked');
+    btn.classList.add('clicked');
+});
+
+const specialButton = document.querySelectorAll('.tab-title');
+specialButton.forEach(btn => {
+    btn.addEventListener('click', () => {
         document.querySelector('.clicked')?.classList.remove('clicked');
         btn.classList.add('clicked');
     });
-}
-
-function showSecondPage(productType) {
-    var str = "";
-    var count = 12;
-    for (let i = count; i < productArray.length; i++) {
-        if (count >= 12 && count < 24) {
-            if (productArray[i].type == productType) {
-                str += `<li class= "product" id="${productArray[i].productID}" onclick="showProductInfo('${productArray[i].productID}')">
-                            <div class="product-img-container">
-                                <img src="./images/product/${productArray[i].productIMG}" alt="" class="product-img">
-                                <div class="product-botton" >
-                                    <div class="icon"><ion-icon name="cart"></ion-icon></div>
-                                    <div class="view-botton">view</div>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="product-infor">
-                            <h4 class="product-title"><a>
-                                ${productArray[i].productName}
-                                </a>
-                            </h4>
-                            <p class="product-brand">${productArray[i].brand}</p>
-                            <p class="product-price">£${productArray[i].price}</p>
-                        </div>
-                </li>`;
-                count++;
-            }
-            document.querySelector(".specialProducts-list").innerHTML = str;
-        }
-        else if (count >= 24) {
-            document.querySelector(".specialProducts-list").innerHTML = str + `<div id="page">
-                <button onclick="showSpecialProducts('${productType}')">1</button>
-                <button>2</button>
-                <!--  <button>3</button> -->
-            </div>`
-        }
-    }
-}
+});
 
 
+const paginationButtons = document.querySelectorAll('button.pageButton');
+paginationButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelector('.pageButtonActive')?.classList.remove('pageButtonActive');
+        btn.classList.add('pageButtonActive');
+    });
+});
 
-
-
-// function showBrandProducts(Pbrand) {
-//     document.getElementById("closeNav").style.display = "none";
-//     document.getElementById("specialProducts").style.borderBottom = "0px";
-//     document.getElementById("banner").style.display = "none";
-//     Pbrand = Pbrand.toLowerCase();
-//     var str = "";
-//     for (let i = 0; i < productArray.length; i++) {
-//         if (productArray[i].brand.toLowerCase() == Pbrand) {
-//             str += `<li class= "product" id="${productArray[i].productID}" onclick="showProductInfo('${productArray[i].productID}')">
-//                             <div class="product-img-container">
-//                                 <img src="./images/product/${productArray[i].productIMG}" alt="" class="product-img">
-//                                 <div class="product-botton" >
-//                                     <div class="icon"><ion-icon name="cart"></ion-icon></div>
-//                                     <div class="view-botton">view</div>
-//                                 </div>
-//                             </div>
-//                         </a>
-//                         <div class="product-infor">
-//                             <h4 class="product-title"><a href="">
-//                                 ${productArray[i].productName}
-//                                 </a>
-//                             </h4>
-//                             <p class="product-brand">${productArray[i].brand}</p>
-//                             <p class="product-price">£${productArray[i].price}</p>
-//                         </div>
-//                 </li >`;
-//         }
-//         document.querySelector(".specialProducts-list").innerHTML = str + `<div id="page">
-//         <button>1</button>
-//         <button>2</button>
-//         <button>3</button>
-//     </div>;`;
-//     }
-// }
 const navButton = document.querySelectorAll('#navmenu li a');
 navButton.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -301,52 +276,88 @@ navButton.forEach(btn => {
 });
 
 
-
-// paging ----------------------------------------------------------------
-
-let perPage = 12;
-let currentPage = 1;
-let start = 0;
-let end = perPage;
-
-function showBrandProducts(Pbrand) {
+function showBrandProducts(brand, index) {
     document.getElementById("closeNav").style.display = "none";
     document.getElementById("specialProducts").style.borderBottom = "0px";
     document.getElementById("banner").style.display = "none";
-    Pbrand = Pbrand.toLowerCase();
-    var str = "";
+    brand = brand.toLowerCase();
+    var brandProductArray = JSON.parse(localStorage.getItem(brand));
     var count = 0;
-    for (let i = 0; i < productArray.length; i++) {
-        if (count < 16) {
-            if (productArray[i].brand.toLowerCase() == Pbrand) {
-                str += `<li class= "product" id="${productArray[i].productID}" onclick="showProductInfo('${productArray[i].productID}')">
-                            <div class="product-img-container">
-                                <img src="images/product/${productArray[i].productIMG}" alt="" class="product-img">
-                                <div class="product-botton" >
-                                    <div class="icon"><ion-icon name="cart"></ion-icon></div>
-                                    <div class="view-botton">view</div>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="product-infor">
-                            <h4 class="product-title"><a href="">
-                                ${productArray[i].productName}
-                                </a>
-                            </h4>
-                            <p class="product-brand">${productArray[i].brand}</p>
-                            <p class="product-price">£${productArray[i].price}</p>
-                        </div>
-                </li >`;
-                count++;
-            }
-            document.querySelector(".specialProducts-list").innerHTML = str;
-        }
-        else {
-            document.querySelector(".specialProducts-list").innerHTML = str + `<div id="page">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                </div>`;
-        }
+    var str = "";
+    for (var i = index; i < brandProductArray.length; i++) {
+        str += `<li class="product" onclick="showProductInfo('${brandProductArray[i].productID}')">
+            <div class="product-img-container">
+                <img src="./images/product/${brandProductArray[i].productIMG}" alt="" class="product-img">
+                <div class="product-botton" >
+                    <div class="icon"><ion-icon name="cart"></ion-icon></div>
+                    <div class="view-botton">view</div>
+                </div>
+            </div>
+            <div class="product-infor">
+                <h4 class="product-title"><a>${brandProductArray[i].productName}</a></h4>
+                <p class="product-brand">${brandProductArray[i].brand}</p>
+                <p class="product-price">£${brandProductArray[i].price}</p>
+            </div>
+        </li>`;
+        count++;
+        if (count == brandProductPerPage) break;
     }
+    document.querySelector(".specialProducts-list").innerHTML = str + ` <div id="page">
+            </div>`;
+    brandPagination(brand);
 }
+
+function brandPagination(brand) {
+    brand = brand.toLowerCase();
+    var quantityOfPages = Math.ceil(JSON.parse(localStorage.getItem(brand)).length / brandProductPerPage);
+    var button = "";
+    for (var i = 1; i <= quantityOfPages; i++) {
+        index = (i - 1) * brandProductPerPage;
+        button += `<button class="pageButton" onclick="showBrandProducts('${brand}', ${index})">${i}</button>`
+    }
+    document.getElementById("page").innerHTML = button;
+}
+
+
+function showSpecialProducts(type, index) {
+    var specialProductArray = JSON.parse(localStorage.getItem(type + 'Product'));
+    var count = 0;
+    var str = "";
+    for (var i = index; i < specialProductArray.length; i++) {
+        str += `<li class="product" onclick="showProductInfo('${specialProductArray[i].productID}')">
+            <div class="product-img-container">
+                <img src="./images/product/${specialProductArray[i].productIMG}" alt="" class="product-img">
+                <div class="product-botton" >
+                    <div class="icon"><ion-icon name="cart"></ion-icon></div>
+                    <div class="view-botton">view</div>
+                </div>
+            </div>
+            <div class="product-infor">
+                <h4 class="product-title"><a>${specialProductArray[i].productName}</a></h4>
+                <p class="product-brand">${specialProductArray[i].brand}</p>
+                <p class="product-price">£${specialProductArray[i].price}</p>
+            </div>
+        </li>`;
+        count++;
+        if (count == specialProductsPerPage) break;
+    }
+    document.querySelector(".specialProducts-list").innerHTML = str + ` <div id="page">
+            </div>`;
+    pagination(type);
+}
+
+
+
+
+
+function pagination(type) {
+    var quantityOfPages = Math.ceil(JSON.parse(localStorage.getItem(type + 'Product')).length / specialProductsPerPage);
+    var button = "";
+    for (var i = 1; i <= quantityOfPages; i++) {
+        index = (i - 1) * specialProductsPerPage;
+        button += `<button class="pageButton" onclick="showSpecialProducts('${type}', ${index})">${i}</button>`
+    }
+    document.getElementById("page").innerHTML = button;
+}
+
+
