@@ -151,7 +151,7 @@ function showProductInfo(productID) {
     var str2 = "";
     str2 += `<div id="productInfor">
                             <div class="image-container">
-                                <img src="../images/product/${productArray[i].productIMG}" class="product-img">
+                                <img src="images/product/${productArray[i].productIMG}" class="product-img">
                             </div>
                             <div class="close-button" onclick="closeProductInfo()">
                                 <p>+</p>
@@ -180,7 +180,7 @@ function showSpecialProducts(productType) {
             if (productArray[i].type == productType) {
                 str += `<li class= "product" id="${productArray[i].productID}" onclick="showProductInfo('${productArray[i].productID}')">
                             <div class="product-img-container">
-                                <img src="./images/product/${productArray[i].productIMG}" alt="" class="product-img">
+                                <img src="images/product/${productArray[i].productIMG}" alt="" class="product-img">
                                 <div class="product-botton" >
                                     <div class="icon"><ion-icon name="cart"></ion-icon></div>
                                     <div class="view-botton">view</div>
@@ -321,7 +321,7 @@ function showBrandProducts(Pbrand) {
             if (productArray[i].brand.toLowerCase() == Pbrand) {
                 str += `<li class= "product" id="${productArray[i].productID}" onclick="showProductInfo('${productArray[i].productID}')">
                             <div class="product-img-container">
-                                <img src="./images/product/${productArray[i].productIMG}" alt="" class="product-img">
+                                <img src="images/product/${productArray[i].productIMG}" alt="" class="product-img">
                                 <div class="product-botton" >
                                     <div class="icon"><ion-icon name="cart"></ion-icon></div>
                                     <div class="view-botton">view</div>
